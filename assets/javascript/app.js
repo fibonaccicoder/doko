@@ -18,6 +18,10 @@ var zillowAPIKey= "X1-ZWz1gaa4c3vvnv_13bwv";
 var joobleQueryURL= "https://us.jooble.org/api/";
 var joobleAPIKey= "833f7ad1-53cf-45ed-9fa3-6c578291a28c";
 
+//https://europass.cedefop.europa.eu/stats-api/to other potential API to use
+//http://api.elance.com/api
+//http://www.careerjet.com/partners/api/
+
 
 //https://www.eventful.com
 //API to get info on events in given cities
@@ -65,4 +69,4 @@ var quotesAPIKey= "";
         });
 
 
-         $(document).on("click");
+         // $(document).on("click");

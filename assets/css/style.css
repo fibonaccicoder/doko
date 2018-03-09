@@ -1,5 +1,5 @@
 #myBtn{
-	
+
 }
 
 #inspirational-quote{
@@ -14,7 +14,11 @@
 
 
 body {
-   background-image: url("../images/Plane.jpg");
+   background-image: url("../images/front-3.jpeg");
    background-color: #cccccc;
 }
 
+/*need to make images smaller, all sized to window for entry page*/
+
+
+/*add media queries here (I forgot how lol)*/
