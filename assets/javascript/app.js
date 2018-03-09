@@ -37,6 +37,11 @@ var quotesAPIKey= "";
 
 
 //must click to enter website, first page = travel photo and inspo quote 
+//Maybe use free photo API to generate new travel(city)-themed photos for front page daily as well
+
+
+
+
 	// Get the input field
 		// var input = document.getElementById("myInput");
 
@@ -51,6 +56,13 @@ var quotesAPIKey= "";
   // 		}
 		// });
 
+function displayImg (){
+for (var i = 0; i<images.length; i++);
+	//image shown will be front-i.jpg
+	
+}
+
+function ajaxCall (){
 	 $.ajax({
           url: quotesQueryURL,
           method: "GET"
@@ -67,6 +79,8 @@ var quotesAPIKey= "";
         	var author = $("<p id= author>").text(response.contents.quotes[0].author);
         	quoteDiv.append(quote, author);
         });
+    }
 
 
-         // $(document).on("click");
+         $(document).ready(function);
+         ajaxCall();
