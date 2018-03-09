@@ -15,8 +15,8 @@ var zillowAPIKey= "X1-ZWz1gaa4c3vvnv_13bwv";
 
 //https://www.indeed.com
 //API for job listings and relevant job info
-var indeedQueryURL= "";
-var indeedAPIKey= "";
+var joobleQueryURL= "https://us.jooble.org/api/";
+var joobleAPIKey= "833f7ad1-53cf-45ed-9fa3-6c578291a28c";
 
 
 //https://www.eventful.com
@@ -59,8 +59,10 @@ var quotesAPIKey= "";
         	//create space for quote to go on page
 
         	var quoteDiv = $("<div>");
-        	var quote = $("<p>").text(response.contents.quotes[0].quote);
-        	var author = $("<p>").text(response.contents.quotes[0].author);
+        	var quote = $("<p id= inspirational-quote>").text(response.contents.quotes[0].quote);
+        	var author = $("<p id= author>").text(response.contents.quotes[0].author);
         	quoteDiv.append(quote, author);
         });
 
+
+         $(document).on("click");
