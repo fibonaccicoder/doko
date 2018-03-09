@@ -1,3 +1,21 @@
 .jumbotron{
-	background-image:url("assets/images/plane.jpg");
+	text-align: center;
+	size: 12px;
+	color: #777777;
+	border: 2px solid #777777;
 }
+
+#inspirational-quote{
+
+}
+
+/*body{
+	color: #777777;
+	text-size: 12px;
+}*/
+
+/*body {
+   background-image: url("../images/Plane.jpg");
+   background-color: #cccccc;
+}*/
+
