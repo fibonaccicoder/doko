@@ -37,7 +37,7 @@ var eventfulAPIKey = "KdNhpLh2wR3FMTL6";
 
 // https://theysaidso.com/api
 //API for inspirational quotes of the day for people to follow their bliss
-var quotesQueryURL = "https://quotes.rest/qod.json";
+var quotesQueryURL = "http://quotes.rest/qod.json";
 var quotesAPIKey = "";
 //I don't think an API key is necessary on this bad boy
 
