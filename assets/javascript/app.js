@@ -7,11 +7,10 @@
 
 var numbeoAPIKey = "4n7468zewaj81z";
 var numbeoQueryURL = "https://cors-anywhere.herokuapp.com/https://www.numbeo.com/api/city_prices?api_key=" + numbeoAPIKey + "&query=Belgrade";
-
+console.log(numbeoQueryURL);
 
 // var numbeoQueryURL= "https://www.numbeo.com/api/city_prices_raw?api_key=4n7468zewaj81z&query=Tucson";
 // var numbeoAPIKey= "4n7468zewaj81z";
-
 
 //https://www.zillow.com
 //API for information on housing/rentals/real estate
@@ -75,7 +74,6 @@ $.ajax({
 }).then(function (response) {
   console.log(numeboQueryURL);
   console.log(response);
-
   //create space for quote to go on page
 
   // var cityDiv = $("<div>");
