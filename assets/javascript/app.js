@@ -56,13 +56,13 @@ var quotesAPIKey= "";
   // 		}
 		// });
 
-function displayImg (){
-for (var i = 0; i<images.length; i++);
-	//image shown will be front-i.jpg
-	
-}
+// function displayImg (){
+// for (var i = 0; i<images.length; i++);
+// 	//image shown will be front-i.jpg
+// 	//images need to be sized down to fit page, also change opacity 
+// }
 
-function ajaxCall (){
+// function ajaxCall (){
 	 $.ajax({
           url: quotesQueryURL,
           method: "GET"
@@ -79,8 +79,9 @@ function ajaxCall (){
         	var author = $("<p id= author>").text(response.contents.quotes[0].author);
         	quoteDiv.append(quote, author);
         });
-    }
+    // }
 
 
-         $(document).ready(function);
-         ajaxCall();
+//   $(document).ready(function){
+//   ajaxCall();
+// }
