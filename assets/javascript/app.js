@@ -3,8 +3,14 @@
 
 //https://www.numbeo.com
 //API for info on pretty much any info relating to various INTERNATIONAL cities
-var numbeoQueryURL= "https://www.numbeo.com/api?api_key=";
+// /api/city_prices_raw?api_key=your_api_key&query=Belgrade
+
+var numbeoQueryURL= "https://www.numbeo.com/api/city_prices?api_key=" + numbeoAPIKey + "&query=Belgrade";
 var numbeoAPIKey= "4n7468zewaj81z";
+
+
+// var numbeoQueryURL= "https://www.numbeo.com/api/city_prices_raw?api_key=4n7468zewaj81z&query=Tucson";
+// var numbeoAPIKey= "4n7468zewaj81z";
 
 
 //https://www.zillow.com
@@ -64,20 +70,18 @@ var quotesAPIKey= "";
 
 // function ajaxCall (){
 	 $.ajax({
-          url: quotesQueryURL,
+          url: numbeoQueryURL,
           method: "GET"
         }).then(function (response) {
-        	console.log(quotesQueryURL);
+        	console.log(numeboQueryURL);
         	console.log(response);
-        	console.log(response.contents.quotes[0].quote);
-        	console.log(response.contents.quotes[0].author);
 
         	//create space for quote to go on page
 
-        	var quoteDiv = $("<div>");
-        	var quote = $("<p id= quote>").text(response.contents.quotes[0].quote);
-        	var author = $("<p id= author>").text("-" + response.contents.quotes[0].author);
-        	$("#inspirational-quote").append(quote, author);
+        	// var cityDiv = $("<div>");
+        	// var city = $("<p id= quote>").text(response);
+        	// var author = $("<p id= author>").text(response);
+        	// $("#inspirational-quote").append(response);
         });
     // }
 
@@ -85,3 +89,21 @@ var quotesAPIKey= "";
 //   $(document).ready(function){
 //   ajaxCall();
 // }
+
+
+   $.ajax({
+          url: quotesQueryURL,
+          method: "GET"
+        }).then(function (response) {
+          console.log(quotesQueryURL);
+          console.log(response);
+          console.log(response.contents.quotes[0].quote);
+          console.log(response.contents.quotes[0].author);
+
+          //create space for quote to go on page
+
+          var quoteDiv = $("<div>");
+          var quote = $("<p id= quote>").text(response.contents.quotes[0].quote);
+          var author = $("<p id= author>").text("-" + response.contents.quotes[0].author);
+          $("#inspirational-quote").append(quote, author);
+        });
