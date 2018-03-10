@@ -5,8 +5,8 @@
 //API for info on pretty much any info relating to various INTERNATIONAL cities
 // /api/city_prices_raw?api_key=your_api_key&query=Belgrade
 
-var numbeoQueryURL = "https://www.numbeo.com/api/city_prices?api_key=" + numbeoAPIKey + "&query=Belgrade";
 var numbeoAPIKey = "4n7468zewaj81z";
+var numbeoQueryURL = "https://www.numbeo.com/api/city_prices?api_key=" + numbeoAPIKey + "&query=Belgrade";
 
 
 // var numbeoQueryURL= "https://www.numbeo.com/api/city_prices_raw?api_key=4n7468zewaj81z&query=Tucson";
@@ -15,8 +15,8 @@ var numbeoAPIKey = "4n7468zewaj81z";
 
 //https://www.zillow.com
 //API for information on housing/rentals/real estate
-var zillowQueryURL = "http://www.zillow.com/webservice/GetZestimate.htm?zws-id=X1-ZWz1gaa4c3vvnv_13bwv&";
 var zillowAPIKey = "X1-ZWz1gaa4c3vvnv_13bwv";
+var zillowQueryURL = "http://www.zillow.com/webservice/GetZestimate.htm?zws-id=X1-ZWz1gaa4c3vvnv_13bwv&";
 
 
 //https://www.indeed.com
