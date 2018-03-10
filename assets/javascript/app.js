@@ -3,7 +3,7 @@
 
 //https://www.numbeo.com
 //API for info on pretty much any info relating to various INTERNATIONAL cities
-var numbeoQueryURL= "https://www.numbeo.com/api?api_key=";
+var numbeoQueryURL= "https://www.numbeo.com/api/city_prices?api_key="+numbeoAPIKey+"&query=Belgrade";
 var numbeoAPIKey= "4n7468zewaj81z";
 
 
