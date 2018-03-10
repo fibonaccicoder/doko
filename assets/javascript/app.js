@@ -70,7 +70,10 @@ var quotesAPIKey = "";
 // function ajaxCall (){
 $.ajax({
   url: numbeoQueryURL,
-  method: "GET"
+  method: "GET",
+  beforeSend: function (request) {
+    request.setRequestHeader("origin", "https://fibonaccicoder.github.io/doko/");
+  }
 }).then(function (response) {
   console.log(numeboQueryURL);
   console.log(response);
