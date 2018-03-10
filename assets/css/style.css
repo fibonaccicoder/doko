@@ -1,20 +1,36 @@
-#myBtn{
+.container{
+}
 
+#myBtn{
+	margin: auto;
+	
 }
 
 #inspirational-quote{
-	font-size:14px;
+	margin-top:80px;
+}
+
+
+#quote{
+	font-family: 'Meie Script', cursive;
+	text-align:center;
 	color: #4d4d33;
+	font-size: 36px;
 }
 
 #author{
-	font-style: italic;
-	color: #c2c2a3;
+	font-family: 'Roboto Mono', monospace;
+	font-size:20px;
+	color: #ffffff;
+	margin-left:200px;
+	float:left;
+	clear:both;
 }
 
 
 body {
-   background-image: url("../images/front-2.jpeg");
+   background-image: url("../images/front-1.jpeg");
+   background-size: 100%;
    background-color: #cccccc;
 }
 
