@@ -6,7 +6,7 @@
 // /api/city_prices_raw?api_key=your_api_key&query=Belgrade
 
 var numbeoAPIKey = "4n7468zewaj81z";
-var numbeoQueryURL = "https://www.numbeo.com/api/city_prices?api_key=" + numbeoAPIKey + "&query=Belgrade";
+var numbeoQueryURL = "https://cors-anywhere.herokuapp.com/https://www.numbeo.com/api/city_prices?api_key=" + numbeoAPIKey + "&query=Belgrade";
 
 
 // var numbeoQueryURL= "https://www.numbeo.com/api/city_prices_raw?api_key=4n7468zewaj81z&query=Tucson";
