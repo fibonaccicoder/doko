@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-.container{
-}
-
-#enter-button{
-=======
 #myBtn {
->>>>>>> 5104b42b1191e853b67d013f57b5fd154a6ac365
 	margin: auto;
 }
 
@@ -33,48 +26,6 @@
 	background-image: url("../images/front-1.jpeg");
 	background-size: 100%;
 	background-color: #cccccc;
-}
-
-#gold-frame {
-	background: url("../images/gold-frame.png") no-repeat center center fixed;
-	/* height: 100%; */
-	/* background-position: center;
-	background-repeat: no-repeat; */
-	background-size: cover;
-	width: 100%;
-	height: auto;
-}
-
-#job-panel {
-	padding-top: 80px;
-	background: transparent;
-}
-
-#job-search-title,
-#job-listings {
-	text-align: center;
-}
-
-img.bg {
-	/* Set rules to fill background */
-	min-height: 100%;
-	min-width: 1024px;
-	/* Set up proportionate scaling */
-	width: 100%;
-	height: auto;
-	/* Set up positioning */
-	position: fixed;
-	top: 0;
-	left: 0;
-}
-
-@media screen and (max-width: 1024px) {
-	/* Specific to this particular image */
-	img.bg {
-		left: 50%;
-		margin-left: -512px;
-		/* 50% */
-	}
 }
 
 /*need to make images smaller, all sized to window for entry page*/

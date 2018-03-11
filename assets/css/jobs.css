@@ -1,0 +1,22 @@
+body,
+html {
+    background-color: rgb(235, 202, 142);
+}
+
+#job-panel {
+    padding-top: 30px;
+    opacity: 0.6;
+    background: white;
+}
+
+#job-search-title,
+#job-listings {
+    text-align: center;
+}
+
+.jumbotron {
+    margin-top: 60px;
+    padding: 60px;
+    margin: 20px;
+    height: 100%;
+}
