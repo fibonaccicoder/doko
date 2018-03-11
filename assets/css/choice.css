@@ -15,6 +15,8 @@
 .left {
     left: 0;
     background-color: rgb(238, 175, 57);
+    /* background-image: url("../images/spiration-light.png") center no-repeat;
+    background-size: cover; */
 }
 
 /* Control the right side */
@@ -22,6 +24,8 @@
 .right {
     right: 0;
     background-color: rgb(132, 185, 235);
+    /* background-image: url("../images/spiration-dark.png") center no-repeat;
+    background-size: cover; */
 }
 
 /* If you want the content centered horizontally and vertically */
