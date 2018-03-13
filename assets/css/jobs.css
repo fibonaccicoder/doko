@@ -15,8 +15,38 @@ html {
 }
 
 .jumbotron {
-    margin-top: 60px;
-    padding: 60px;
-    margin: 20px;
+    padding-top: 60px;
+    margin: 40px 20px 40px 20px;
     height: 100%;
+}
+
+.footer {
+    margin-top: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(168, 203, 235);
+    color: white;
+    text-align: center;
+    /* padding-top: .5rem;
+    padding-bottom: .5rem; */
+    font-family: 'Roboto Mono', monospace;
+    /* font-size: 20px; */
+}
+
+.navbar {
+    background-color: rgb(168, 203, 235);
+    color: white;
+    text-align: center;
+    /* padding-top: .5rem;
+    padding-bottom: .5rem; */
+    font-family: 'Roboto Mono', monospace;
+    /* font-size: 20px; */
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    /* font-size: 20px; */
 }
