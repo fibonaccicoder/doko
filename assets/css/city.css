@@ -1,20 +1,49 @@
-
-#city-pic{
-
-}
-
-#city-stats{
-
-}
-
-#city-job-listings{
-
-}
-
-#city-events{
-    
-body, html {
+body,
+html {
     background-color: rgb(235, 202, 142);
+}
+
+.jumbotron2 {
+    padding-top: 60px;
+    margin: 40px 20px 40px 20px;
+    height: 100%;
+}
+
+#city-info-panel {
+    padding-top: 30px;
+    opacity: 0.8;
+    background: white;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
 
 .footer {
