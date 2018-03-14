@@ -13,16 +13,15 @@ $(document).ready(function () {
 
     $("#next-button").on("click", function () {
         pageNum++;
-        ~
-        console.log(pageNum);
-        $("tBody").empty();
-        // getQueryVariables();
-        // getParams(urlVariables[0], urlVariables[1], radius, pageNum);
-        console.log(params);
-        displayJobs();
         $("#page-number").empty();
         $("#page-number").text("Page " + pageNum);
-        console.log("Page- " + pageNum);
+        $("tBody").empty();
+        // getQueryVariables();
+        // getParams();
+        console.log(params);
+        displayJobs();
+
+
     })
     console.log("Page: " + pageNum);
     $(".submit").on("click", function () {
@@ -51,6 +50,7 @@ $(document).ready(function () {
 
     var urlVariables = getQueryVariables();
     console.log(urlVariables);
+
     var params = getParams(urlVariables[0], urlVariables[1], radius, pageNum);
     console.log(params);
 
