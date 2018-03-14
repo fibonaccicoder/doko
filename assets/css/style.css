@@ -11,10 +11,6 @@
 	text-align: center;
 }
 
-#enter-button {
-	opacity: 1.0;
-}
-
 #quote {
 	font-family: 'Meie Script', cursive;
 	text-align: center;
@@ -36,7 +32,7 @@ h1,
 	/* font-size: 20px; */
 }
 
-.cover {
+#cover {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;

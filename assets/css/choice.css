@@ -14,14 +14,19 @@
 
 .left {
     left: 0;
-    background-color: rgb(238, 175, 57);
+    /* background: url('../images/spiration-light2.png');
+    repeat: none; */
+    background-color: rgb(235, 185, 93)
 }
 
 /* Control the right side */
 
 .right {
     right: 0;
-    background-color: rgb(132, 185, 235);
+    /* background: url('../images/spiration-dark.png'); */
+    background-color: rgb(104, 172, 235)
+    /* repeat: none;
+    color: #ffffff; */
 }
 
 /* If you want the content centered horizontally and vertically */
