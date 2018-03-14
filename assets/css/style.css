@@ -32,7 +32,7 @@ h1,
 	/* font-size: 20px; */
 }
 
-.cover {
+#cover {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
