@@ -15,8 +15,6 @@
 .left {
     left: 0;
     background-color: rgb(238, 175, 57);
-    /* background-image: url("../images/spiration-light.png") center no-repeat;
-    background-size: cover; */
 }
 
 /* Control the right side */
@@ -24,8 +22,6 @@
 .right {
     right: 0;
     background-color: rgb(132, 185, 235);
-    /* background-image: url("../images/spiration-dark.png") center no-repeat;
-    background-size: cover; */
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -43,4 +39,37 @@
 .centered img {
     width: 150px;
     border-radius: 50%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(168, 203, 235);
+    color: white;
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-family: 'Roboto Mono', monospace;
+    /* font-size: 20px; */
+}
+
+.navbar {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(168, 203, 235);
+    color: white;
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-family: 'Roboto Mono', monospace;
+    /* font-size: 20px; */
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    /* font-size: 20px; */
 }
