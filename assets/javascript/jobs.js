@@ -17,8 +17,10 @@ $(document).ready(function () {
         $("#page-number").text("Page " + pageNum);
         $("tBody").empty();
         // getQueryVariables();
-        // getParams();
-        console.log(params);
+        params = getParams(keyword, location, radius, pageNum);
+        // console.log(params);
+        // params = params.replace(pageNum, pageNum++);
+        console.log("params2: " + params);
         displayJobs();
 
 
@@ -95,7 +97,8 @@ $(document).ready(function () {
                     jobTitleTd.append(jobLink);
 
                     var locationLink = $("<a>").text(response.jobs[i].location);
-                    locationLink.attr("href", "city.html?location=" + response.jobs[i].location);
+                    locationLink.attr("href", "city.html?keyword=" + keyword + "location=" + response.jobs[i].location);
+                    // console.log("location link: " + locationLink.attr("href"));
                     var jobLocationTd = $("<td>");
                     jobLocationTd.append(locationLink);
 
