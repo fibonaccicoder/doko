@@ -29,7 +29,7 @@ $(document).ready(function () {
     $("#page-number").text("Page " + pageNum);
 
     console.log("Page: " + pageNum);
-    $(".submit").on("click", function () {
+    $("#search").on("click", function () {
         //prevent the page from refreshing
         event.preventDefault();
 
