@@ -14,34 +14,19 @@
 
 .left {
     left: 0;
-    background: url('../images/spiration-light2.png');
-    repeat: none;
+    /* background: url('../images/spiration-light2.png');
+    repeat: none; */
+    background-color: rgb(235, 185, 93)
 }
 
-.jumbotron-left {
-	padding: 60px;
-	margin: 60px 20px 20px 20px;
-	height: 100%;
-	background: white;
-	opacity: 0.75;
-	text-align: center;
-}
 /* Control the right side */
 
 .right {
     right: 0;
-   background: url('../images/spiration-dark.png');
-   repeat:none;
-   color: #ffffff;
-}
-
-.jumbotron-right {
-	padding: 60px;
-	margin: 60px 20px 20px 20px;
-	height: 100%;
-	background: white;
-	opacity: 0.75;
-	text-align: center;
+    /* background: url('../images/spiration-dark.png'); */
+    background-color: rgb(104, 172, 235)
+    /* repeat: none;
+    color: #ffffff; */
 }
 
 /* If you want the content centered horizontally and vertically */
