@@ -33,20 +33,6 @@ var eventfulQueryURL = "http://eventful.com/oauth/authorize?oauth_token=";
 var eventfulAPIKey = "KdNhpLh2wR3FMTL6";
 
 
-// Get the input field
-// var input = document.getElementById("myInput");
-
-// // Execute a function when the user releases a key on the keyboard
-// input.addEventListener("keyup", function(event) {
-// 		// Cancel the default action, if needed
-// 		event.preventDefault();
-// 		// Number 13 is the "Enter" key on the keyboard
-// 		if (event.keyCode === 13) {
-//   	// Trigger the button element with a click
-//   	document.getElementById("myBtn").click();
-// 		}
-// });
-
 // function ajaxCall (){
 $.ajax({
   url: numbeoQueryURL,
@@ -59,3 +45,25 @@ $.ajax({
   console.log(response);
 
 });
+
+//set up display tabs for city-info-panel
+function cityInfo(event, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablink;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablink = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablink.length; i++) {
+    tablink[i].className = tablink[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  event.currentTarget.className += " active";
+}

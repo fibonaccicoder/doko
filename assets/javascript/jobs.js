@@ -2,15 +2,34 @@ $(document).ready(function () {
     //jobs
 
     var url = "https://us.jooble.org/api/";
-    var key = "833f7ad1-53cf-45ed-9fa3-6c578291a28c";
+    var key = "3671dd18-dbc4-4dc5-8cad-62eacf822971";
     var keyword = "web development";
     var location = "";
     var radius = "50";
     // var salary = "25000";
     var pageNum = 1;
 
+    function changePageNum(newPage) {
+        $("#page-number").empty();
+        $("#page-number").text("Page " + pageNum);
+        $("tBody").empty();
+        params = getParams(urlVariables[0], urlVariables[1], radius, pageNum);
+        console.log("params: " + params);
+        displayJobs();
+    }
 
-    $(".submit").on("click", function () {
+    $("#next-button").on("click", function () {
+        changePageNum(pageNum++);
+    })
+
+    $("#previous-button").on("click", function () {
+        changePageNum(pageNum--);
+    })
+
+    $("#page-number").text("Page " + pageNum);
+
+    console.log("Page: " + pageNum);
+    $("#search").on("click", function () {
         //prevent the page from refreshing
         event.preventDefault();
 
@@ -36,6 +55,7 @@ $(document).ready(function () {
 
     var urlVariables = getQueryVariables();
     console.log(urlVariables);
+
     var params = getParams(urlVariables[0], urlVariables[1], radius, pageNum);
     console.log(params);
 
@@ -71,15 +91,23 @@ $(document).ready(function () {
 
                 for (var i = 0; i < response.jobs.length; i++) {
 
-                    var tBody = $("tBody");
+                    var jobTable = $("#job-table");
                     var tRow = $("<tr>");
-                    var jobTitleTd = $("<td>").text(response.jobs[i].title);
-                    var jobLocationTd = $("<td>").text(response.jobs[i].location);
+                    var jobLink = $("<a>").text(response.jobs[i].title)
+                    jobLink.attr("href", response.jobs[i].link);
+                    jobLink.attr('target', '_blank');
+                    var jobTitleTd = $("<td>");
+                    jobTitleTd.append(jobLink);
+
+                    var locationLink = $("<a>").text(response.jobs[i].location);
+                    locationLink.attr("href", "city.html?keyword=" + response.jobs[i].title + "&location=" + response.jobs[i].location);
+                    // console.log("location link: " + locationLink.attr("href"));
+                    var jobLocationTd = $("<td>");
+                    jobLocationTd.append(locationLink);
 
                     tRow.append(jobTitleTd, jobLocationTd);
-                    tBody.append(tRow);
+                    jobTable.append(tRow);
 
-                    console.log(response.jobs[0].title);
 
                 }
 
@@ -90,6 +118,49 @@ $(document).ready(function () {
     function sortResults(response) {
 
     }
+
+    function displayCityJobs() {
+        keyword =
+            $.ajax({
+                url: url + key,
+                beforeSend: function (request) {
+                    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                },
+                method: "POST",
+                data: params
+            }).then(function (response) {
+                console.log(response);
+
+
+
+                for (var i = 0; i < response.jobs.length; i++) {
+
+                    var cityJobs = $("#city-jobs");
+                    var tRow = $("<tr>");
+                    var jobLink = $("<a>").text(response.jobs[i].title)
+                    jobLink.attr("href", response.jobs[i].link);
+                    jobLink.attr('target', '_blank');
+                    var jobTitleTd = $("<td>");
+                    jobTitleTd.append(jobLink);
+
+                    tRow.append(jobTitleTd);
+                    cityJobs.append(tRow);
+
+
+                }
+
+            });
+        console.log("params: " + params);
+    }
+
+    // $("#Jobs").on("click", function () {
+    //     url = getURL("city.html", keyword, location)
+
+    //     window.location.href = url
+    //     params = getParams(urlVariables[0], urlVariables[1], radius, pageNum);
+    //     displayCityJobs();
+    // })
+    displayCityJobs();
 
     function getParams(keyword, location, radius, pageNum) {
         return "{keywords: '" + keyword + "', location: '" + location + "', radius: '" + radius + "', page: '" + pageNum + "'}";
