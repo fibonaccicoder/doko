@@ -3,7 +3,10 @@ var numbeoQueryURL= "https://www.numbeo.com/api/city_prices?api_key="+numbeoAPIK
 
 $.ajax({
     url:numbeoQueryURL,
-    method:"GET"
+    beforeSend: function(request){
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    },
+    method:"POST"
 }).then(function(response){
     console.log(numbeoQueryURL);
     console.log(response);
