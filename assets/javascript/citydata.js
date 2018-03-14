@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 var numbeoAPIKey= "4n7468zewaj81z";
 var numbeoQueryURL= "https://corsbridge.herokuapp.com/https%3A%2F%2Fwww.numbeo.com%2Fapi%2Fcity_prices%3Fapi_key%3D4n7468zewaj81z%26query%3DBelgrade";
-=======
-var numbeoAPIKey = "4n7468zewaj81z";
-var numbeoQueryURL = "https://www.numbeo.com/api/city_prices?api_key=" + numbeoAPIKey + "&query=Belgrade";
->>>>>>> 6422a2f8835a78d9222a85e7f47bfd0a611e29e0
 
 $.ajax({
     url: numbeoQueryURL,
