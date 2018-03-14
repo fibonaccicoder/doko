@@ -10,37 +10,80 @@ $(document).ready(function () {
     var pageNum = 1;
 
 
-    var params = getParams(keyword, location, radius, pageNum);
+    $(".submit").on("click", function () {
+        //prevent the page from refreshing
+        event.preventDefault();
+
+        //get inputs
+        location = $("#city-input").val().trim()
+        keyword = $("#job-input").val();
+        console.log("location: " + location);
+        console.log("keyword: " + keyword);
+
+        $("#job-input").val("");
+
+        var url = getURL("jobs.html", keyword, location)
+
+        window.location.href = url
+
+
+    })
+
+    function getURL(html, keyword, location) {
+        return html + "?keyword=" + keyword + "&location=" + location;
+
+    }
+
+    var urlVariables = getQueryVariables();
+    console.log(urlVariables);
+    var params = getParams(urlVariables[0], urlVariables[1], radius, pageNum);
     console.log(params);
 
+    function getQueryVariables() {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+
+
+        console.log(vars);
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            vars[i] = pair[1];
+
+            // if (pair[0] == variable) { return pair[1]; }
+        }
+        return (vars);
+    }
+
+
     function displayJobs() {
-        $.ajax({
-            url: url + key,
-            beforeSend: function (request) {
-                request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            },
-            method: "POST",
-            data: params
-        }).then(function (response) {
-            console.log(response);
+        keyword =
+            $.ajax({
+                url: url + key,
+                beforeSend: function (request) {
+                    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                },
+                method: "POST",
+                data: params
+            }).then(function (response) {
+                console.log(response);
 
 
 
-            for (var i = 0; i < response.jobs.length; i++) {
+                for (var i = 0; i < response.jobs.length; i++) {
 
-                var tBody = $("tBody");
-                var tRow = $("<tr>");
-                var jobTitleTd = $("<td>").text(response.jobs[i].title);
-                var jobLocationTd = $("<td>").text(response.jobs[i].location);
+                    var tBody = $("tBody");
+                    var tRow = $("<tr>");
+                    var jobTitleTd = $("<td>").text(response.jobs[i].title);
+                    var jobLocationTd = $("<td>").text(response.jobs[i].location);
 
-                tRow.append(jobTitleTd, jobLocationTd);
-                tBody.append(tRow);
+                    tRow.append(jobTitleTd, jobLocationTd);
+                    tBody.append(tRow);
 
-                console.log(response.jobs[0].title);
+                    console.log(response.jobs[0].title);
 
-            }
+                }
 
-        });
+            });
     }
     displayJobs()
 
