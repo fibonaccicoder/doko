@@ -3,10 +3,6 @@
 
 }
 
-#city-summary{
-
- }
-
 #city-stats{
 
 }
@@ -17,9 +13,7 @@
 
 #city-events{
     
-=======
-body,
-html {
+body, html {
     background-color: rgb(235, 202, 142);
 }
 
@@ -52,6 +46,3 @@ html {
     font-family: 'Roboto Mono', monospace;
     /* font-size: 20px; */
 }
-
-/* alkjdfhlsadhf */
-/* //ugh jared */
