@@ -9,7 +9,22 @@ $(document).ready(function () {
     // var salary = "25000";
     var pageNum = 1;
 
+    $("#page-number").text("Page " + pageNum);
 
+    $("#next-button").on("click", function () {
+        pageNum++;
+        ~
+        console.log(pageNum);
+        $("tBody").empty();
+        // getQueryVariables();
+        // getParams(urlVariables[0], urlVariables[1], radius, pageNum);
+        console.log(params);
+        displayJobs();
+        $("#page-number").empty();
+        $("#page-number").text("Page " + pageNum);
+        console.log("Page- " + pageNum);
+    })
+    console.log("Page: " + pageNum);
     $(".submit").on("click", function () {
         //prevent the page from refreshing
         event.preventDefault();
@@ -73,13 +88,20 @@ $(document).ready(function () {
 
                     var tBody = $("tBody");
                     var tRow = $("<tr>");
-                    var jobTitleTd = $("<td>").text(response.jobs[i].title);
-                    var jobLocationTd = $("<td>").text(response.jobs[i].location);
+                    var jobLink = $("<a>").text(response.jobs[i].title)
+                    jobLink.attr("href", response.jobs[i].link);
+                    jobLink.attr('target', '_blank');
+                    var jobTitleTd = $("<td>");
+                    jobTitleTd.append(jobLink);
+
+                    var locationLink = $("<a>").text(response.jobs[i].location);
+                    locationLink.attr("href", "city.html?location=" + response.jobs[i].location);
+                    var jobLocationTd = $("<td>");
+                    jobLocationTd.append(locationLink);
 
                     tRow.append(jobTitleTd, jobLocationTd);
                     tBody.append(tRow);
 
-                    console.log(response.jobs[0].title);
 
                 }
 
@@ -88,6 +110,10 @@ $(document).ready(function () {
     displayJobs()
 
     function sortResults(response) {
+
+    }
+
+    function displayCityJobs() {
 
     }
 
