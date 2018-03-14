@@ -1,4 +1,3 @@
-
 //relevant variables needed aka global variables to pull from
 
 //https://www.numbeo.com
@@ -41,12 +40,6 @@ var quotesAPIKey = "";
 //I don't think an API key is necessary on this bad boy
 
 
-//must click to enter website, first page = travel photo and inspo quote 
-//Maybe use free photo API to generate new travel(city)-themed photos for front page daily as well
-
-
-
-
 // Get the input field
 // var input = document.getElementById("myInput");
 
@@ -60,12 +53,6 @@ var quotesAPIKey = "";
 //   	document.getElementById("myBtn").click();
 // 		}
 // });
-
-// function displayImg (){
-// for (var i = 0; i<images.length; i++);
-// 	//image shown will be front-i.jpg
-// 	//images need to be sized down to fit page, also change opacity 
-// }
 
 // function ajaxCall (){
 $.ajax({
@@ -102,9 +89,16 @@ $.ajax({
   console.log(response.contents.quotes[0].author);
 
   //create space for quote to go on page
-
   var quoteDiv = $("<div>");
   var quote = $("<p id= quote>").text(response.contents.quotes[0].quote);
   var author = $("<p id= author>").text("-" + response.contents.quotes[0].author);
   $("#inspirational-quote").append(quote, author);
 });
+
+//display random images of cities and places in US on homepage--one image per load
+function changeRandomImage() {
+  var imageArray = ["assets/images/albuquerque.jpg", "assets/images/anchorage.jpg", "assets/images/baltimore.jpg", "assets/images/boston.jpg", "assets/images/boulder.jpg", "assets/images/cadillacranch.jpg", "assets/images/cheyenne.jpg", "assets/images/chicago.jpg", "assets/images/crestedbutte.jpg", "assets/images/detroit.jpg", "assets/images/detroit2.jpg", "assets/images/horseshoebend.jpeg", "assets/images/losangeles.jpg", "assets/images/maui.jpg", "assets/images/memphis.jpg", "assets/images/memphis2.jpg", "assets/images/miami.jpg", "assets/images/minneapolis.jpg", "assets/images/missoula.jpg", "assets/images/newhampshire.jpg", "assets/images/neworleans.jpg", "assets/images/portland.jpg", "assets/images/puertorico.jpg", "assets/images/sandiego.jpg", "assets/images/sanfran.jpg", "assets/images/savannah.jpg", "assets/images/seattle.jpg", "assets/images/sedona.jpg", "assets/images/taos.jpg", "assets/images/washingtondc.jpg", ]
+  var randomImage = Math.floor(Math.random() * imageArray.length);
+  document.body.background = imageArray[randomImage];
+}
+changeRandomImage();

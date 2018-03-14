@@ -15,8 +15,7 @@ html {
 }
 
 .jumbotron {
-    margin-top: 60px;
     padding: 60px;
-    margin: 20px;
+    margin: 60px 20px 20px 20px;
     height: 100%;
 }

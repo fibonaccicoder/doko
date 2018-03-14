@@ -1,33 +1,44 @@
-#myBtn {
-	margin: auto;
+/* #inspirational-quote {
+	margin-top: 80px;
+} */
+
+.jumbotron {
+	padding: 60px;
+	margin: 60px 20px 20px 20px;
+	height: 100%;
+	background: white;
+	opacity: 0.75;
+	text-align: center;
 }
 
-#inspirational-quote {
-	margin-top: 80px;
+#enter-button {
+	opacity: 1.0;
 }
 
 #quote {
 	font-family: 'Meie Script', cursive;
 	text-align: center;
-	color: #4d4d33;
+	/* color: #ffffff; */
 	font-size: 36px;
 }
 
 #author {
 	font-family: 'Roboto Mono', monospace;
 	font-size: 20px;
-	color: #ffffff;
-	margin-left: 200px;
-	float: left;
+	/* color: #ffffff; */
+	text-align: center;
 	clear: both;
 }
 
-#cover-pic {
-	background-image: url("../images/front-1.jpeg");
-	background-size: 100%;
-	background-color: #cccccc;
+h1,
+.lead {
+	font-family: 'Roboto Mono', monospace;
+	/* font-size: 20px; */
 }
 
-/*need to make images smaller, all sized to window for entry page*/
-
-/*add media queries here (I forgot how lol)*/
+.cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
