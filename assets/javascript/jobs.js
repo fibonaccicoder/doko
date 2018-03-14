@@ -119,9 +119,39 @@ $(document).ready(function () {
 
     }
 
-    function displayCityJobs() {
+    // function displayCityJobs() {
+    //     keyword =
+    //         $.ajax({
+    //             url: url + key,
+    //             beforeSend: function (request) {
+    //                 request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    //             },
+    //             method: "POST",
+    //             data: params
+    //         }).then(function (response) {
+    //             console.log(response);
 
-    }
+
+
+    //             for (var i = 0; i < response.jobs.length; i++) {
+
+    //                 var tBody = $("tBody");
+    //                 var tRow = $("<tr>");
+    //                 var jobLink = $("<a>").text(response.jobs[i].title)
+    //                 jobLink.attr("href", response.jobs[i].link);
+    //                 jobLink.attr('target', '_blank');
+    //                 var jobTitleTd = $("<td>");
+    //                 jobTitleTd.append(jobLink);
+
+    //                 tRow.append(jobTitleTd);
+    //                 tBody.append(tRow);
+
+
+    //             }
+
+    //         });
+    // }
+    // displayCityJobs();
 
     function getParams(keyword, location, radius, pageNum) {
         return "{keywords: '" + keyword + "', location: '" + location + "', radius: '" + radius + "', page: '" + pageNum + "'}";
