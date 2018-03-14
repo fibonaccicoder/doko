@@ -9,22 +9,25 @@ $(document).ready(function () {
     // var salary = "25000";
     var pageNum = 1;
 
-    $("#page-number").text("Page " + pageNum);
-
-    $("#next-button").on("click", function () {
-        pageNum++;
+    function changePageNum(newPage) {
         $("#page-number").empty();
         $("#page-number").text("Page " + pageNum);
         $("tBody").empty();
-        // getQueryVariables();
-        params = getParams(keyword, location, radius, pageNum);
-        // console.log(params);
-        // params = params.replace(pageNum, pageNum++);
-        console.log("params2: " + params);
+        params = getParams(urlVariables[0], urlVariables[1], radius, pageNum);
+        console.log("params: " + params);
         displayJobs();
+    }
 
-
+    $("#next-button").on("click", function () {
+        changePageNum(pageNum++);
     })
+
+    $("#previous-button").on("click", function () {
+        changePageNum(pageNum--);
+    })
+
+    $("#page-number").text("Page " + pageNum);
+
     console.log("Page: " + pageNum);
     $(".submit").on("click", function () {
         //prevent the page from refreshing
