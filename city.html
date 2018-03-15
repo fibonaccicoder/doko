@@ -51,7 +51,27 @@
 
                         <div id="Events" class="tabcontent">
                             <h3>Events</h3>
-                            <p>Here are the rad events in this town!</p>
+                            <p>Here are rad events in this town!</p>
+                            <thead>
+                                <tr>
+                                    <th>Event Listings</th>
+                                </tr>
+
+                                <form id="events-form">
+                                    <label for="location-input">Choose Your City</label>
+
+                                    <input type="text" id="location-input">
+                                    <br>
+
+                                    <input id="select-location" type="submit" value="GO!">
+
+                                </form>
+
+                            </thead>
+                            <tbody id="event-listings">
+
+
+                            </tbody>
                         </div>
 
                         <div id="Stats" class="tabcontent">
@@ -74,6 +94,8 @@
     <script type="text/javascript" src="assets/javascript/events.js"></script>
     <script type="text/javascript" src="assets/javascript/jobs.js"></script>
     <!-- <script type="text/javascript" src="assets/javascript/realestate.js"></script> -->
+    <script type="text/javascript" src="http://api.eventful.com/js/api">
+    </script>
 </body>
 
 </html>
