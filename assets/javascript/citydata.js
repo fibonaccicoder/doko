@@ -47,7 +47,7 @@ $(document).ready(function () {
     function displayCityStats() {
         keyword =
             $.ajax({
-                url: url + key,
+                url: numbeoQueryURL,
                 beforeSend: function (request) {
                     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 },
@@ -56,9 +56,6 @@ $(document).ready(function () {
             }).then(function (response) {
                 console.log(response);
 
-
-
-                for (var i = 0; i < response.city.length; i++) {
 
                     var cityData = $("#data-table");
                     var tRow = $("<tr>");
@@ -78,7 +75,7 @@ $(document).ready(function () {
 
             });
     }
-    displayCityStats()
+    displayCityStats();
 
     function sortResults(response) {
 
@@ -87,16 +84,14 @@ $(document).ready(function () {
     function displayCityJobs() {
         keyword =
             $.ajax({
-                url: numbeoQueryURL,
+                url: url+key,
                 beforeSend: function (request) {
                     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 },
-                method: "GET",
+                method: "POST",
                 data: params
             }).then(function (response) {
                 console.log(response);
-
-                //this is not right, I don't think a for loop is needed but I'm not sure how to display the data.
 
 
                     var cityJobs = $("#city-jobs");
@@ -121,3 +116,8 @@ $(document).ready(function () {
         return "{keywords: '" + keyword + "', location: '" + location + "', radius: '" + radius + "', page: '" + pageNum + "'}";
     }
 })
+
+
+
+//url for google photos to be used, need to insert city data for city searched to be displayed in city page
+// https://www.google.com/search?q=" + city + "+city&rlz=1C1CHBF_enUS706US707&source=lnms&tbm=isch&sa=X&ved=0ahUKEwit3a-5s-3ZAhUI4mMKHfU1BusQ_AUICygC&biw=1366&bih=662"
