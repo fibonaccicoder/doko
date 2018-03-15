@@ -67,3 +67,7 @@ function cityInfo(event, tabName) {
   document.getElementById(tabName).style.display = "block";
   event.currentTarget.className += " active";
 }
+
+//Default Open the "Jobs" tab on the city.html page
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
