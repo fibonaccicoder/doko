@@ -78,6 +78,23 @@ $(document).ready(function () {
                     var tRow = $("<tr>");
                     var priceData = $("<p>").text(response.prices)
 
+                    // /api/city_healthcare?api_key=your_api_key&query=Belgrade
+                    // /api/indices?api_key=your_api_key&query=Belgrade
+                    // /api/city_crime?api_key=your_api_key&query=Belgrade
+                    // /api/city_prices?api_key=your_api_key&query=Belgrade
+
+                    //housing prices
+                    //internet/gas/electric
+                    //average salary
+                    //price of petrol
+                    //avg meal prices
+                    //avg cost of domestic beer
+                    //crime rate
+                    //healthcare (skill and competency?)
+
+
+                
+
                     // var locationLink = $("<a>").text(response.jobs[i].location);
                     // locationLink.attr("href", "city.html?keyword=" + response.jobs[i].title + "&location=" + response.jobs[i].location);
                     // // console.log("location link: " + locationLink.attr("href"));

@@ -1,5 +1,5 @@
 //city.html background image generator
-var keyword = "Austin";
+var keyword = "Chicago";
 
 $(document).ready(function () {
 
