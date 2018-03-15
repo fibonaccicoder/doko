@@ -1,3 +1,20 @@
+
+var numbeoAPIKey= "4n7468zewaj81z";
+var numbeoQueryURL= "https://corsbridge.herokuapp.com/https%3A%2F%2Fwww.numbeo.com%2Fapi%2Fcity_prices%3Fapi_key%3D4n7468zewaj81z%26query%3DBelgrade";
+
+$.ajax({
+    url: numbeoQueryURL,
+    beforeSend: function (request) {
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.setRequestHeader("origin", )
+    },
+    method: "GET"
+}).then(function (response) {
+    console.log(numbeoQueryURL);
+    console.log(response);
+    $("#Stats").text(response.name);
+});
+
 $(document).ready(function () {
 
     var numbeoQueryURL= "https://corsbridge.herokuapp.com/https%3A%2F%2Fwww.numbeo.com%2Fapi%2Fcity_prices%3Fapi_key%3D4n7468zewaj81z%26query%3D" + location;
@@ -121,3 +138,4 @@ $(document).ready(function () {
 
 //url for google photos to be used, need to insert city data for city searched to be displayed in city page
 // https://www.google.com/search?q=" + city + "+city&rlz=1C1CHBF_enUS706US707&source=lnms&tbm=isch&sa=X&ved=0ahUKEwit3a-5s-3ZAhUI4mMKHfU1BusQ_AUICygC&biw=1366&bih=662"
+
