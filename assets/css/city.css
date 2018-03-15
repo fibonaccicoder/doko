@@ -3,7 +3,7 @@ html {
     background-color: rgb(235, 202, 142);
 }
 
-.jumbotron2 {
+.jumbotron {
     padding-top: 60px;
     margin: 40px 20px 40px 20px;
     height: 100%;
@@ -23,6 +23,10 @@ html {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+}
+
+h3 {
+    text-align: center;
 }
 
 /* Change background color of buttons on hover */
