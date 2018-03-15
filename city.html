@@ -19,34 +19,38 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-offset-2 col-md-12">
-                <div class="jumbotron" id="city-info-panel">
+                <div class="jumbotron2" id="city-info-panel">
                     <div class="panel panel-default">
                         <div class="panel-heading panel-primary">
                             <h3 class="panel-title" id="city-name">
-                                <strong>City Name</strong>
+                                <strong></strong>
                             </h3>
                         </div>
+
                         <!-- Tab links -->
                         <div class="tab">
-                            <button class="tablink" onclick="cityInfo(event, 'Jobs')">Jobs</button>
-                            <button class="tablink" onclick="cityInfo(event, 'Events')">Events</button>
-                            <button class="tablink" onclick="cityInfo(event, 'Stats')">Stats</button>
+                            <button class="tablinks" onclick="cityInfo(event, 'Jobs')">Jobs</button>
+                            <button class="tablinks" onclick="cityInfo(event, 'Stats')">Stats</button>
+                            <button class="tablinks" onclick="cityInfo(event, 'Events')">Events</button>
                         </div>
+
                         <!-- Tab content -->
                         <div id="Jobs" class="tabcontent">
                             <h3>Jobs</h3>
                             <p>Here are rad jobs in this town!</p>
-                            <table class="table table-hover" id="job-listings">
-                                <thead>
-                                    <tr>
-                                        <th>Job Title</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="city-jobs">
+                            <div class="panel-body">
+                                <table class="table table-hover" id="job-listings">
+                                    <thead>
+                                        <tr>
+                                            <th>Job Title</th>
 
-                                </tbody>
-                            </table>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="city-jobs">
 
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                         <div id="Events" class="tabcontent">
@@ -89,13 +93,11 @@
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <!-- <script type="text/javascript" src="assets/javascript/citydata.js"></script> -->
-    <script type="text/javascript" src="assets/javascript/events.js"></script>
-    <script type="text/javascript" src="assets/javascript/jobs.js"></script>
-    <!-- <script type="text/javascript" src="assets/javascript/realestate.js"></script> -->
-    <script type="text/javascript" src="http://api.eventful.com/js/api">
-    </script>
+    <script type="text/javascript " src="assets/javascript/app.js"></script>
+    <script type="text/javascript " src="assets/javascript/citydata.js"></script>
+    <script type="text/javascript " src="assets/javascript/events.js"></script>
+    <script type="text/javascript " src="assets/javascript/jobs.js"></script>
+    <script type="text/javascript " src="assets/javascript/realestate.js"></script>
 </body>
 
 </html>
