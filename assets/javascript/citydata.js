@@ -7,7 +7,7 @@ $.ajax({
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         request.setRequestHeader("origin", )
     },
-    method: "POST"
+    method: "GET"
 }).then(function (response) {
     console.log(numbeoQueryURL);
     console.log(response);
