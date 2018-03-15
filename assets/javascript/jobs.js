@@ -2,7 +2,7 @@ $(document).ready(function () {
     //jobs
 
     var url = "https://us.jooble.org/api/";
-    var key = "3671dd18-dbc4-4dc5-8cad-62eacf822971";
+    var key = "74c1e96d-515b-431a-aa74-399f6c6193a9";
     var keyword = "web development";
     var location = "";
     var radius = "50";
