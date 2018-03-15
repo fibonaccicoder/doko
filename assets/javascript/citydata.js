@@ -11,4 +11,5 @@ $.ajax({
 }).then(function (response) {
     console.log(numbeoQueryURL);
     console.log(response);
+    $("#Stats").text(response.name);
 });
