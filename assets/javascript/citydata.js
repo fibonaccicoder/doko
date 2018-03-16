@@ -43,7 +43,7 @@ $(document).ready(function () {
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
                 var nameTD = $("<td>").text(response.prices[i].item_name);
-                var priceTD = $("<td>").text(response.prices[i].average_price);
+                var priceTD = $("<td>").text("$ " + response.prices[i].average_price.toFixed(2));
                 console.log("index" + index);
                 tRow.append(nameTD, priceTD);
                 cityStats.append(tRow);
