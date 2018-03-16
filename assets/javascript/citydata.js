@@ -35,8 +35,22 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response)
+            //var name = "item_name";
+            //var price = "average_price";
+            var index = [0, 3, 7, 19, 21, 22, 25, 27, 30, 36, 37, 39, 40, 41];
+            for (var i = 0; i < index.length; i++) {
+
+                var cityStats = $("#city-stats");
+                var tRow = $("<tr>");
+                var nameTD = $("<td>").text(response.prices[i].item_name);
+                var priceTD = $("<td>").text(response.prices[i].average_price);
+                console.log("index" + index);
+                tRow.append(nameTD, priceTD);
+                cityStats.append(tRow);
+
+            }
             //$("#Stats").text(response.name);
-            $("#Stats").text(response.prices[0].item_name);
+            //$("#Stats").text(response.prices[0].item_name);
         });
     }
     runNumbeo();

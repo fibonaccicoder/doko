@@ -1,5 +1,5 @@
 //city.html background image generator
-var keyword = "babies";
+var keyword = "";
 
 $(document).ready(function () {
 
