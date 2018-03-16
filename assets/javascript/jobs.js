@@ -51,6 +51,23 @@ $(document).ready(function () {
         var url = getURL("jobs.html", keyword, location)
         window.location.href = url
     })
+    $("#explore").on("click", function () {
+        //prevent the page from refreshing
+        event.preventDefault();
+
+        //get inputs from choice.html
+        location = $("#city-input").val().trim()
+        keyword = $("#job-input").val();
+        console.log("location: " + location);
+        console.log("keyword: " + keyword);
+
+        // empties the input fields on choice.html
+        $("#city-input").val("");
+        $("#job-input").val("");
+
+        var url = getURL("city.html", keyword, location)
+        window.location.href = url
+    })
 
     // this stores the location and keyword to the the URL to load the job listings on jobs.html
     function getURL(html, keyword, location) {
