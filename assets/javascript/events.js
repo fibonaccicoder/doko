@@ -42,10 +42,10 @@
 // }
 
 function searchEvents(location) {
-    var queryURL = "http://eventful.com/oauth/authorize?oauth_token=&l=" + location + "&KdNhpLh2wR3FMTL6";
+    var queryURL = "https://corsbridge.herokuapp.com/http%3A%2F%2Feventful.com%2Foauth%2Fauthorize%3Foauth_token%3D" + location + "&KdNhpLh2wR3FMTL6";
     $.ajax({
         url: queryURL,
-        method: "GET"
+        method: "POST"
     }).then(function (response) {
         console.log(response);
 
