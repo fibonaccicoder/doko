@@ -36,26 +36,18 @@
 
                         <!-- Tab content -->
                         <div id="Jobs" class="tabcontent">
-                            <h3>Jobs</h3>
-                            <p>Here are rad jobs in this town!</p>
+                            <h3>Here are some jobs in this city!</h3>
                             <div class="panel-body">
                                 <table class="table table-hover" id="job-listings">
                                     <thead>
                                         <tr>
                                             <th>Job Title</th>
-
                                         </tr>
                                     </thead>
                                     <tbody id="city-jobs">
-
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-
-                        <div id="Events" class="tabcontent">
-                            <h3>Events</h3>
-                            <p>Here are the rad events in this town!</p>
                         </div>
 
                         <div id="Stats" class="tabcontent">
@@ -76,22 +68,46 @@
                                 </table>
                             </div>
                         </div>
+
+                        <div id="Events" class="tabcontent">
+                            <h3>Check out some events in this city!</h3>
+                            <div class="panel-body">
+                                <table class="table table-hover" id="event-listings">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <form id="events-form">
+                                                    <label for="location-input">Choose Your City</label>
+                                                    <input type="text" id="location-input">
+                                                    <input id="select-location" type="submit" value="GO!">
+                                                </form>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>Event Listings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="city-events">
+
+                                    </tbody>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer">
-        <p>Copyright &copy; 2018 Dukoders</p>
-    </div>
+        <div class="footer">
+            <p>Copyright &copy; 2018 Dukoders</p>
+        </div>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript " src="assets/javascript/app.js"></script>
-    <script type="text/javascript " src="assets/javascript/citydata.js"></script>
-    <script type="text/javascript " src="assets/javascript/events.js"></script>
-    <script type="text/javascript " src="assets/javascript/jobs.js"></script>
-    <script type="text/javascript " src="assets/javascript/realestate.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript " src="assets/javascript/app.js"></script>
+        <script type="text/javascript " src="assets/javascript/citydata.js"></script>
+        <script type="text/javascript " src="assets/javascript/events.js"></script>
+        <script type="text/javascript " src="assets/javascript/jobs.js"></script>
+        <script type="text/javascript " src="assets/javascript/realestate.js"></script>
+        <script type="text/javascript" src="assets/javascript/citycover.js"></script>
 </body>
 
 </html>
