@@ -42,16 +42,17 @@
 // }
 
 function searchEvents(location) {
-    var queryURL = "https://corsbridge.herokuapp.com/http%3A%2F%2Feventful.com%2Foauth%2Fauthorize%3Foauth_token%3D" + location + "&KdNhpLh2wR3FMTL6";
+    var queryURL = "http://api.eventful.com/json/events/search?app_key=KdNhpLh2wR3FMTL6&keywords=books&location=" + location + "&date=Future";
     $.ajax({
-        url: queryURL,
-        method: "POST"
+        url: 'https://corsbridge.herokuapp.com/' + encodeURIComponent(queryURL),
+        method: "GET",
+        dataType: 'json'
     }).then(function (response) {
         console.log(response);
 
 
-        $("#event-listings").empty();
-        $("#event-listings").append();
+        // $("#event-listings").empty();
+        // $("#event-listings").append();
     });
 }
 

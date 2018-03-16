@@ -1,9 +1,9 @@
 //city.html background image generator
-var keyword = "Chicago";
+var keyword = "babies";
 
 $(document).ready(function () {
 
-    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
+    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?keyword=" + keyword, {
             tags: keyword,
             tagmode: "any",
             format: "json"
