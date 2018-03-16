@@ -1,39 +1,41 @@
-
-var numbeoAPIKey= "4n7468zewaj81z";
-var numbeoQueryURL= "https://corsbridge.herokuapp.com/https%3A%2F%2Fwww.numbeo.com%2Fapi%2Fcity_prices%3Fapi_key%3D4n7468zewaj81z%26query%3DBelgrade";
-
-$.ajax({
-    url: numbeoQueryURL,
-    beforeSend: function (request) {
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.setRequestHeader("origin", )
-    },
-    method: "GET"
-}).then(function (response) {
-    console.log(numbeoQueryURL);
-    console.log(response);
-    $("#Stats").text(response.name);
-});
-
 $(document).ready(function () {
+    function encodeAndCorsBridge(url) {
+        return "https://corsbridge.herokuapp.com/" + encodeURIComponent(url)
+    }
+    function runNumbeo() {
+        var numbeoAPIKey = "4n7468zewaj81z";
+        var location = 'belgrade'
+        var unencodedNumbeoURL = 'https://www.numbeo.com/api/city_prices?api_key=' + numbeoAPIKey + '&query=' + location;
+        var numbeoQueryURL = encodeAndCorsBridge(unencodedNumbeoURL);
+        $.ajax({
+            url: numbeoQueryURL,
+            // headers: { 'Content-Type': 'application/json' },
+            // data: {
+            //     url: numbeoQueryURL
+            // },
+            // beforeSend: function (request) {
+            //     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            //     request.setRequestHeader("origin", )
+            // },
+            method: "GET"
+        }).then(function (response) {
+            console.log(response)
+            $("#Stats").text(response.name);
+        });
+    }
+    runNumbeo();
+    //get inputs
+    location = $("#city-input").val().trim()
+    keyword = $("#job-input").val();
+    console.log("location: " + location);
+    console.log("keyword: " + keyword);
 
-    var numbeoQueryURL= "https://corsbridge.herokuapp.com/https%3A%2F%2Fwww.numbeo.com%2Fapi%2Fcity_prices%3Fapi_key%3D4n7468zewaj81z%26query%3D" + location;
-    var numbeoAPIKey= "4n7468zewaj81z";
-    var location = "";
+    $("#city-input").val("");
 
+    var url = getURL("city.html", keyword, location)
 
-        //get inputs
-        location = $("#city-input").val().trim()
-        keyword = $("#job-input").val();
-        console.log("location: " + location);
-        console.log("keyword: " + keyword);
+    window.location.href = url
 
-        $("#city-input").val("");
-
-        var url = getURL("city.html", keyword, location)
-
-        window.location.href = url
-    })
 
     function getURL(html, location) {
         return html + "&location=" + location;
@@ -64,7 +66,7 @@ $(document).ready(function () {
     function displayCityStats() {
         keyword =
             $.ajax({
-                url: numbeoQueryURL,
+                url: url + key,
                 beforeSend: function (request) {
                     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 },
@@ -74,26 +76,12 @@ $(document).ready(function () {
                 console.log(response);
 
 
+
+                for (var i = 0; i < response.city.length; i++) {
+
                     var cityData = $("#data-table");
                     var tRow = $("<tr>");
                     var priceData = $("<p>").text(response.prices)
-
-                    // /api/city_healthcare?api_key=your_api_key&query=Belgrade
-                    // /api/indices?api_key=your_api_key&query=Belgrade
-                    // /api/city_crime?api_key=your_api_key&query=Belgrade
-                    // /api/city_prices?api_key=your_api_key&query=Belgrade
-
-                    //housing prices
-                    //internet/gas/electric
-                    //average salary
-                    //price of petrol
-                    //avg meal prices
-                    //avg cost of domestic beer
-                    //crime rate
-                    //healthcare (skill and competency?)
-
-
-                
 
                     // var locationLink = $("<a>").text(response.jobs[i].location);
                     // locationLink.attr("href", "city.html?keyword=" + response.jobs[i].title + "&location=" + response.jobs[i].location);
@@ -109,7 +97,7 @@ $(document).ready(function () {
 
             });
     }
-    displayCityStats();
+    displayCityStats()
 
     function sortResults(response) {
 
@@ -118,41 +106,36 @@ $(document).ready(function () {
     function displayCityJobs() {
         keyword =
             $.ajax({
-                url: url+key,
+                url: numbeoQueryURL,
                 beforeSend: function (request) {
                     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 },
-                method: "POST",
+                method: "GET",
                 data: params
             }).then(function (response) {
                 console.log(response);
 
+                //this is not right, I don't think a for loop is needed but I'm not sure how to display the data.
 
-                    var cityJobs = $("#city-jobs");
-                    var tRow = $("<tr>");
-                    var jobLink = $("<a>").text(response.jobs[i].title)
-                    jobLink.attr("href", response.jobs[i].link);
-                    jobLink.attr('target', '_blank');
-                    var jobTitleTd = $("<td>");
-                    jobTitleTd.append(jobLink);
 
-                    tRow.append(jobTitleTd);
-                    cityJobs.append(tRow);
-                }
+                var cityJobs = $("#city-jobs");
+                var tRow = $("<tr>");
+                var jobLink = $("<a>").text(response.jobs[i].title)
+                jobLink.attr("href", response.jobs[i].link);
+                jobLink.attr('target', '_blank');
+                var jobTitleTd = $("<td>");
+                jobTitleTd.append(jobLink);
+
+                tRow.append(jobTitleTd);
+                cityJobs.append(tRow);
 
             });
         console.log("params: " + params);
     }
-  
+
     displayCityJobs();
 
     function getParams(keyword, location, radius, pageNum) {
         return "{keywords: '" + keyword + "', location: '" + location + "', radius: '" + radius + "', page: '" + pageNum + "'}";
     }
-})
-
-
-
-//url for google photos to be used, need to insert city data for city searched to be displayed in city page
-// https://www.google.com/search?q=" + city + "+city&rlz=1C1CHBF_enUS706US707&source=lnms&tbm=isch&sa=X&ved=0ahUKEwit3a-5s-3ZAhUI4mMKHfU1BusQ_AUICygC&biw=1366&bih=662"
-
+});

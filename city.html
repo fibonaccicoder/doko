@@ -11,7 +11,7 @@
     <title>doko city</title>
 </head>
 
-<body id="cover">
+<body>
     <nav class="navbar">
         <a class="navbar-brand" href="index.html">doko - find where you belong</a>
     </nav>
@@ -29,82 +29,55 @@
 
                         <!-- Tab links -->
                         <div class="tab">
-                            <button class="tablinks" onclick="cityInfo(event, 'Jobs')" id="defaultOpen">Jobs</button>
-                            <button class="tablinks" onclick="cityInfo(event, 'Stats')">Stats</button>
+                            <button class="tablinks" onclick="cityInfo(event, 'Jobs')">Jobs</button>
                             <button class="tablinks" onclick="cityInfo(event, 'Events')">Events</button>
+                            <button class="tablinks" onclick="cityInfo(event, 'Stats')">Stats</button>
                         </div>
 
                         <!-- Tab content -->
                         <div id="Jobs" class="tabcontent">
-                            <h3>Here are some jobs in this city!</h3>
+                            <h3>Jobs</h3>
+                            <p>Here are rad jobs in this town!</p>
                             <div class="panel-body">
                                 <table class="table table-hover" id="job-listings">
                                     <thead>
                                         <tr>
                                             <th>Job Title</th>
+
                                         </tr>
                                     </thead>
                                     <tbody id="city-jobs">
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
 
-                        <div id="Stats" class="tabcontent">
-                            <h3>Here are some statistics about this city!</h3>
-                            <div class="panel-body">
-                                <table class="table table-hover" id="stats-list">
-                                    <thead>
-                                        <tr>
-                                            <th>City Statistics</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="city-stats">
                                     </tbody>
                                 </table>
                             </div>
                         </div>
 
                         <div id="Events" class="tabcontent">
-                            <h3>Check out some events in this city!</h3>
-                            <div class="panel-body">
-                                <table class="table table-hover" id="event-listings">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <form id="events-form">
-                                                    <label for="location-input">Choose Your City</label>
-                                                    <input type="text" id="location-input">
-                                                    <input id="select-location" type="submit" value="GO!">
-                                                </form>
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th>Event Listings</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="city-events">
+                            <h3>Events</h3>
+                            <p>Here are the rad events in this town!</p>
+                        </div>
 
-                                    </tbody>
-                            </div>
-
+                        <div id="Stats" class="tabcontent">
+                            <h3>Stats</h3>
+                            <p>Here are rad stats about this town!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="footer">
-            <p>Copyright &copy; 2018 Dukoders</p>
-        </div>
+    <div class="footer">
+        <p>Copyright &copy; 2018 Dukoders</p>
+    </div>
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
-        <script type="text/javascript" src="assets/javascript/citydata.js"></script>
-        <script type="text/javascript" src="assets/javascript/events.js"></script>
-        <script type="text/javascript" src="assets/javascript/jobs.js"></script>
-        <script type="text/javascript" src="assets/javascript/realestate.js"></script>
-        <script type="text/javascript" src="assets/javascript/citycover.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript " src="assets/javascript/app.js"></script>
+    <script type="text/javascript " src="assets/javascript/citydata.js"></script>
+    <script type="text/javascript " src="assets/javascript/events.js"></script>
+    <script type="text/javascript " src="assets/javascript/jobs.js"></script>
+    <script type="text/javascript " src="assets/javascript/realestate.js"></script>
 </body>
 
 </html>
