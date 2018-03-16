@@ -1,10 +1,25 @@
 $(document).ready(function () {
+    var urlVariables = getQueryVariables();
+    // this takes the variables back out of the URL
+    function getQueryVariables() {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        console.log(vars);
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            vars[i] = pair[1];
+        }
+        return (vars);
+    }
+
     function encodeAndCorsBridge(url) {
         return "https://corsbridge.herokuapp.com/" + encodeURIComponent(url)
     }
     function runNumbeo() {
         var numbeoAPIKey = "4n7468zewaj81z";
-        var location = 'belgrade'
+        var location = urlVariables[1];
+        console.log("location" + location);
+        console.log("urlVariables" + urlVariables[1]);
         var unencodedNumbeoURL = 'https://www.numbeo.com/api/city_prices?api_key=' + numbeoAPIKey + '&query=' + location;
         var numbeoQueryURL = encodeAndCorsBridge(unencodedNumbeoURL);
         $.ajax({
@@ -20,11 +35,13 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response)
-            $("#Stats").text(response.name);
+            //$("#Stats").text(response.name);
+            $("#Stats").text(response.prices[0].item_name);
         });
     }
     runNumbeo();
     //get inputs
+
     location = $("#city-input").val().trim()
     keyword = $("#job-input").val();
     console.log("location: " + location);
