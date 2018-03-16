@@ -35,7 +35,8 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response)
-            $("#Stats").text(response.name);
+            //$("#Stats").text(response.name);
+            $("#Stats").text(response.prices[0].item_name);
         });
     }
     runNumbeo();
