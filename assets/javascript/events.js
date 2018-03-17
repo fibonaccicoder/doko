@@ -16,14 +16,16 @@ $(document).ready(function () {
         console.log("vars " + vars);
         console.log("urlVariables " + urlVariables);
     }
-    function searchEvents(location) {
+
+    function searchEvents() {
+        var location = urlVariables[1];
         var queryURL = "http://api.eventful.com/json/events/search?app_key=KdNhpLh2wR3FMTL6&keywords=music&location=" + location + "&date=Future";
         $.ajax({
             url: 'https://corsbridge.herokuapp.com/' + encodeURIComponent(queryURL),
             method: "GET",
             dataType: 'json'
         }).then(function (response) {
-            console.log(response);
+            console.log("events" + response);
 
             for (var i = 0; i < response.events.event.length; i++) {
                 var cityEvents = $("#city-events")
@@ -42,13 +44,14 @@ $(document).ready(function () {
             }
         });
     }
+    searchEvents();
+    // $("#select-location").on("click", function (event) {
+    //     event.preventDefault();
 
-    $("#select-location").on("click", function (event) {
-        event.preventDefault();
+    //     var inputLocation = $("#location-input").val().trim();
+    //     searchEvents(inputLocation);
+    // });
 
-        var inputLocation = $("#location-input").val().trim();
-        searchEvents(inputLocation);
-    });
     function getParams(keyword, location, radius, pageNum) {
         return "{keywords: '" + keyword + "',  location: '" + location + "', radius: '" + radius + "', page: '" + pageNum + "'}";
     }

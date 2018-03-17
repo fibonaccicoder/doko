@@ -8,7 +8,7 @@ $(document).ready(function () {
     var radius = "50";
     var pageNum = 1;
     var urlVariables = getQueryVariables();
-    console.log(urlVariables);
+    console.log("test" + urlVariables);
     var params = getParams(urlVariables[0], urlVariables[1], radius, pageNum);
     console.log(params);
 
