@@ -13,13 +13,21 @@ $(document).ready(function () {
     console.log(params);
     location = urlVariables[1];
 
+    // alert(typeof location)
+
+    // var cityNameDisplay = location;
+    // $(".city-name").text(cityNameDisplay.replace("%20", " "));
+    // console.log("city name = " + cityNameDisplay);
+
+    $(".city-name").text(location);
+
     // takes the inputs from choice.html and saves them as variables
     function getInputs(html) {
         //prevent the page from refreshing
         event.preventDefault();
 
         //get inputs from choice.html
-        location = $("#city-input").val().trim()
+        location = $("#city-input").val().trim();
         keyword = $("#job-input").val();
         console.log("location: " + location);
         console.log("keyword: " + keyword);
@@ -162,10 +170,12 @@ $(document).ready(function () {
                 eventLink.attr("target", "_blank");
                 var eventTitleTd = $("<td>");
                 eventTitleTd.append(eventLink);
-                // var eventTime = $("<td>");
-                // var startTime = response.events.event[i].start_time;
-                // eventTime = moment(startTime).format("h:mm a");
-                tRow.append(eventTitleTd);
+
+
+                var eventTimeTd = $("<td>");
+                var startTime = response.events.event[i].start_time;
+                eventTimeTd.text(moment(startTime).format('MMMM Do YYYY'));
+                tRow.append(eventTitleTd, eventTimeTd);
                 cityEvents.append(tRow);
                 console.log(response);
 

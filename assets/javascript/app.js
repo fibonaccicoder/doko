@@ -1,38 +1,3 @@
-//relevant variables needed aka global variables to pull from
-
-//https://www.numbeo.com
-//API for info on pretty much any info relating to various INTERNATIONAL cities
-// /api/city_prices_raw?api_key=your_api_key&query=Belgrade
-
-var numbeoAPIKey = "4n7468zewaj81z";
-var numbeoQueryURL = "https://cors-anywhere.herokuapp.com/https://www.numbeo.com/api/city_prices?api_key=" + numbeoAPIKey + "&query=Belgrade";
-console.log(numbeoQueryURL);
-
-
-//API for job listings and relevant job info
-var joobleQueryURL = "https://us.jooble.org/api/";
-var joobleAPIKey = "833f7ad1-53cf-45ed-9fa3-6c578291a28c";
-
-
-//https://www.eventful.com
-//API to get info on events in given cities
-var eventfulQueryURL = "http://eventful.com/oauth/authorize?oauth_token=";
-var eventfulAPIKey = "KdNhpLh2wR3FMTL6";
-
-
-// function ajaxCall (){
-$.ajax({
-  url: numbeoQueryURL,
-  method: "GET",
-  beforeSend: function (request) {
-    request.setRequestHeader("origin", "https://fibonaccicoder.github.io/doko/");
-  }
-}).then(function (response) {
-  console.log(numeboQueryURL);
-  console.log(response);
-
-});
-
 //set up display tabs for city-info-panel
 function cityInfo(event, tabName) {
   // Declare all variables

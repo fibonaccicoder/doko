@@ -26,20 +26,38 @@
 }
 
 #quote {
+<<<<<<< HEAD
 	font-family: 'Roboto Mono';
+=======
+	font-family: 'Tangerine', cursive;
+>>>>>>> ddc45cfc09779bc9f7f861ec886357a5defae7fe
 	text-align: center;
 	/* color: #ffffff; */
 	font-size: 24px;
 }
 
 #author {
+<<<<<<< HEAD
 	font-family: 'Tangerine', monospace;
 	font-size: 40px;
+=======
+	font-family: 'Berkshire Swash', monospace;
+	font-size: 20px;
+>>>>>>> ddc45cfc09779bc9f7f861ec886357a5defae7fe
 	/* color: #ffffff; */
 	text-align:center;
 	clear: both;
 }
 
+<<<<<<< HEAD
+=======
+h1,
+.lead {
+	font-family: 'Berkshire Swash', monospace;
+	/* font-size: 20px; */
+}
+
+>>>>>>> ddc45cfc09779bc9f7f861ec886357a5defae7fe
 #cover {
 	background-size: cover;
 	background-repeat: no-repeat;
