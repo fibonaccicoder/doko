@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // initial variables
     var url = "https://us.jooble.org/api/";
-    var key = "74c1e96d-515b-431a-aa74-399f6c6193a9";
+    var key = "5bbea2df-0017-4a1f-abdc-58ac3dceac09";
     var keyword = "";
     var location = "";
     var radius = "50";
