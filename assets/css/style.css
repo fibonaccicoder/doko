@@ -12,14 +12,14 @@
 }
 
 #quote {
-	font-family: 'Meie Script', cursive;
+	font-family: 'Tangerine', cursive;
 	text-align: center;
 	/* color: #ffffff; */
 	font-size: 36px;
 }
 
 #author {
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'Berkshire Swash', monospace;
 	font-size: 20px;
 	/* color: #ffffff; */
 	text-align: center;
@@ -28,7 +28,7 @@
 
 h1,
 .lead {
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'Berkshire Swash', monospace;
 	/* font-size: 20px; */
 }
 
