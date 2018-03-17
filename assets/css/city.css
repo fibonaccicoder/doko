@@ -3,12 +3,12 @@ html {
     background-color: rgb(235, 202, 142);
 }
 
-#cover {
+/* #cityImage {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-}
+} */
 
 #city-info-panel {
     padding-top: 30px;
@@ -47,8 +47,7 @@ h3 {
 
 /* Create an active/current tablink class */
 
-.tab button.focus,
-.tab button.active {
+.tab button.focus {
     /* background-color: #ccc; */
     background-color: rgb(235, 185, 93);
 }
