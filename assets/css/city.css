@@ -90,3 +90,6 @@ h3 {
     font-family: 'Berkshire Swash', monospace;
     /* font-size: 20px; */
 }
+td {
+    font-family: 'Varela', monospace;
+}
