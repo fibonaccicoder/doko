@@ -196,7 +196,10 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response)
-            var index = [0, 3, 7, 19, 21, 22, 25, 27, 30, 36, 37, 39, 40, 41];
+            var index = [21, 36, 25, 27, 37, 39, 0, 3, 7, 19];
+
+            // 22, 30, 40, 41
+
             for (var i = 0; i < index.length; i++) {
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
