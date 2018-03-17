@@ -162,10 +162,10 @@ $(document).ready(function () {
                 eventLink.attr("target", "_blank");
                 var eventTitleTd = $("<td>");
                 eventTitleTd.append(eventLink);
-                // var eventTime = $("<td>");
+                var eventTime = $("<td>").text(response.events.event[i].start_time);
                 // var startTime = response.events.event[i].start_time;
                 // eventTime = moment(startTime).format("h:mm a");
-                tRow.append(eventTitleTd);
+                tRow.append(eventTitleTd, eventTime);
                 cityEvents.append(tRow);
                 console.log(response);
 
