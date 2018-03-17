@@ -12,6 +12,11 @@ html {
     background: white;
 }
 
+#doko{
+    font-family: 'Berkshire Swash', monospace;
+    font-size:40px;
+}
+
 #job-search-title,
 #job-listings {
     text-align: center;

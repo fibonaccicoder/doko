@@ -25,6 +25,7 @@ $.ajax({
     //create space for quote to go on page
     var quoteDiv = $("<div>");
     var quote = $("<p id= quote>").text(response.contents.quotes[0].quote);
+    // var quote1 = quote.toUpperCase();
     var author = $("<p id= author>").text("-" + response.contents.quotes[0].author);
     $("#inspirational-quote").append(quote, author);
 });

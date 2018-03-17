@@ -11,25 +11,33 @@
 	text-align: center;
 }
 
+.btn{
+	font-family: 'Roboto Mono';
+}
+
+#doko{
+	font-family: 'Berkshire Swash', monospace;
+	font-size: 80px;
+}
+
+#lead{
+	font-family: 'Roboto Mono';
+	font-size:22px;
+}
+
 #quote {
-	font-family: 'Meie Script', cursive;
+	font-family: 'Roboto Mono';
 	text-align: center;
 	/* color: #ffffff; */
-	font-size: 36px;
+	font-size: 24px;
 }
 
 #author {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 20px;
+	font-family: 'Tangerine', monospace;
+	font-size: 40px;
 	/* color: #ffffff; */
-	text-align: center;
+	text-align:center;
 	clear: both;
-}
-
-h1,
-.lead {
-	font-family: 'Roboto Mono', monospace;
-	/* font-size: 20px; */
 }
 
 #cover {

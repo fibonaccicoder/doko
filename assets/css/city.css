@@ -1,6 +1,15 @@
-body,
-html {
-    background-color: rgb(235, 202, 142);
+/* Getty API key dhervdbfpw3s45yr3u8t2wud */
+
+
+body {
+    background: linear-gradient(to bottom right, #026670, #9FEDD7, #FEF9C7);
+    font-family: 'Roboto Mono';
+    font-size: 18px;
+}
+
+#doko{
+	font-family: 'Berkshire Swash', monospace;
+	font-size: 50px;
 }
 
 #cover {
@@ -9,12 +18,6 @@ html {
     background-attachment: fixed;
     background-position: center;
 }
-
-/* .jumbotron {
-    padding-top: 60px;
-    margin: 40px 20px 40px 20px;
-    height: 100%;
-} */
 
 #city-info-panel {
     padding-top: 30px;
@@ -31,7 +34,7 @@ html {
 }
 
 .tab button {
-    background-color: rgb(235, 202, 142);
+    background-color:linear-gradient(to right, #FCE181, #FEF9C7);
     float: left;
     border: none;
     outline: none;
@@ -68,21 +71,19 @@ h3 {
 }
 
 .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(168, 203, 235);
     color: white;
     text-align: center;
     /* padding-top: .5rem;
     padding-bottom: .5rem; */
     font-family: 'Roboto Mono', monospace;
+    margin-top: 40px;
     /* font-size: 20px; */
 }
 
 .navbar {
-    background-color: rgb(168, 203, 235);
     color: white;
     text-align: center;
     /* padding-top: .5rem;
