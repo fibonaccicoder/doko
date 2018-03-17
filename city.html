@@ -18,22 +18,36 @@
 
     <div class="container">
         <div class="row">
-            <div class="container col-md-6" id="city-info-panel">
+            <div class="container col-md-8" id="city-info-panel">
                 <div class="panel panel-default">
                     <div class="panel-heading panel-primary">
                         <h3 class="panel-title" id="city-name">
-                            <strong></strong>
+                            <strong>Your City!</strong>
                         </h3>
                     </div>
 
                     <!-- Tab links -->
                     <div class="tab">
+                        <button class="tablinks" onclick="cityInfo(event, 'Home')">Home</button>
                         <button class="tablinks" onclick="cityInfo(event, 'Jobs')">Jobs</button>
                         <button class="tablinks" onclick="cityInfo(event, 'Events')">Events</button>
                         <button class="tablinks" onclick="cityInfo(event, 'Stats')">Stats</button>
                     </div>
 
                     <!-- Tab content -->
+                    <div id="Home" class="tabcontent">
+                        <h3>Home</h3>
+                        <p>Welcome to our city display page. Click the Jobs tab to see jobs in this city; the Events tab to
+                            see upcoming events in this city; and the Stats tab to show statistics about this city!</p>
+                        <div class="panel-body" id="defaultOpen">
+                            <form id="reset-form">
+                                <label for="location-input">Explore Another City</label>
+                                <input type="text" id="location-input">
+                                <input id="select-location" type="submit" value="GO!">
+                            </form>
+                        </div>
+                    </div>
+
                     <div id="Jobs" class="tabcontent">
                         <h3>Here are some jobs in this city!</h3>
                         <div class="panel-body">
@@ -93,12 +107,13 @@
                     </div>
                 </div>
             </div>
-            <div class="container col-md-4 col-md-offset-1" id="city-image-panel">
+            <div class="container col-md-3" id="city-image-panel">
                 <div class="panel panel-default">
                     <div class="panel-heading panel-primary">
                         <h3 class="panel-title" id="city-image">
                             <strong>Images</strong>
                         </h3>
+                        <div class="image-div"></div>
                     </div>
                 </div>
             </div>
@@ -109,17 +124,10 @@
         <p>Copyright &copy; 2018 Dukoders</p>
     </div>
 
-<<<<<<< HEAD
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript " src="assets/javascript/app.js"></script>
     <script type="text/javascript " src="assets/javascript/logic.js"></script>
     <script type="text/javascript" src="assets/javascript/citycover.js"></script>
-=======
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript " src="assets/javascript/app.js"></script>
-        <script type="text/javascript " src="assets/javascript/logic.js"></script>
-        <script type="text/javascript" src="assets/javascript/citycover.js"></script>
->>>>>>> 9171937ff9d2e729c3e044263a8984677d7dc017
 </body>
 
 </html>
