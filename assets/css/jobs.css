@@ -1,9 +1,8 @@
 /* Jooble API only to be used on presentation day 7394bf1d-6c72-487d-9766-8c32c01ac3b2 */
 
 
-body,
-html {
-    background-color: rgb(235, 202, 142);
+body{
+    background: linear-gradient(to bottom right, rgb(255, 219, 88), #FEF9C7, #9FEDD7);
 }
 
 #job-panel {
@@ -29,35 +28,33 @@ html {
 }
 
 .footer {
-    margin-top: 20px;
-    position: fixed;
+    margin-top: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(168, 203, 235);
     color: white;
     text-align: center;
     /* padding-top: .5rem;
     padding-bottom: .5rem; */
-    font-family: 'Berkshire Swash', monospace;
+    font-family: 'Roboto Mono', monospace;
     /* font-size: 20px; */
 }
 
 .navbar {
-    background-color: rgb(168, 203, 235);
     color: white;
     text-align: center;
     /* padding-top: .5rem;
     padding-bottom: .5rem; */
-    font-family: 'Berkshire Swash', monospace;
+    font-family: 'Roboto Mono', monospace;
+    /* font-size: 20px; */
+}
+ .navbar-brand {
+    color: white;
     /* font-size: 20px; */
 }
 
-.navbar-brand {
-    color: white;
-    font-family: 'Berkshire Swash', monospace;
-    /* font-size: 20px; */
-}
 td {
     font-family: 'Varela', monospace;
 }

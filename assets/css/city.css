@@ -17,11 +17,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-<<<<<<< HEAD
-}
-=======
 } */
->>>>>>> ddc45cfc09779bc9f7f861ec886357a5defae7fe
 
 #city-info-panel {
     padding-top: 30px;
@@ -38,7 +34,7 @@ body {
 }
 
 .tab button {
-    background-color:linear-gradient(to right, #FCE181, #FEF9C7);
+    background-color: #FCE181;
     float: left;
     border: none;
     outline: none;
@@ -82,13 +78,13 @@ h3 {
     text-align: center;
     /* padding-top: .5rem;
     padding-bottom: .5rem; */
-<<<<<<< HEAD
     font-family: 'Roboto Mono', monospace;
     margin-top: 40px;
-=======
-    font-family: 'Berkshire Swash', monospace;
->>>>>>> ddc45cfc09779bc9f7f861ec886357a5defae7fe
     /* font-size: 20px; */
+}
+
+.tab-header{
+
 }
 
 .navbar {
@@ -96,13 +92,13 @@ h3 {
     text-align: center;
     /* padding-top: .5rem;
     padding-bottom: .5rem; */
-    font-family: 'Berkshire Swash', monospace;
+    font-family: 'Roboto Mono', monospace;
     /* font-size: 20px; */
 }
 
 .navbar-brand {
     color: white;
-    font-family: 'Berkshire Swash', monospace;
+    font-family: 'Roboto Mono', monospace;
     /* font-size: 20px; */
 }
 
