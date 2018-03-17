@@ -18,10 +18,9 @@
                 <span id="doko">doko</span> - find where you belong</a>
         </nav>
 
-        <div class="container">
-            <div class="row">
-                <div class="container col-md-3" id="city-image-panel">
-                    <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="" id="city-image-panel">
                     <div class="panel panel-default">
                         <div class="panel-heading panel-primary">
                             <h3 class="panel-title">
@@ -31,97 +30,97 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container col-md-8" id="city-info-panel">
-                    <div class="panel panel-default">
-                        <div class="panel-heading panel-primary">
-                            <h3 class="panel-title">
-                                <strong class="city-name"></strong>
-                            </h3>
+            <div class="col-md-8" id="city-info-panel">
+                <div class="panel panel-default">
+                    <div class="panel-heading panel-primary">
+                        <h3 class="panel-title">
+                            <strong class="city-name"></strong>
+                        </h3>
+                    </div>
+
+                    <!-- Tab links -->
+                    <div class="tab">
+                        <button class="tablinks" onclick="cityInfo(event, 'Home')" id="defaultOpen">Home</button>
+                        <button class="tablinks" onclick="cityInfo(event, 'Jobs')">Jobs</button>
+                        <button class="tablinks" onclick="cityInfo(event, 'Events')">Events</button>
+                        <button class="tablinks" onclick="cityInfo(event, 'Stats')">Stats</button>
+                    </div>
+
+                    <!-- Tab content -->
+                    <div id="Home" class="tabcontent">
+                        <h3>Home</h3>
+                        <p>Welcome to our city display page. Click the Jobs tab to see jobs in this city; the Events tab to
+                            see upcoming events in this city; and the Stats tab to show statistics about this city!</p>
+                        <div class="panel-body">
+                            <form id="reset-form">
+                                <label for="location-input">Explore Another City</label>
+                                <input type="text" id="location-input">
+                                <input id="select-location" type="submit" value="GO!">
+                                <label for="job-input">Search for Another Job</label>
+                                <input type="text" id="job-input">
+                                <input id="select-job" type="submit" value="GO!">
+                            </form>
                         </div>
+                    </div>
 
-                        <!-- Tab links -->
-                        <div class="tab">
-                            <button class="tablinks" onclick="cityInfo(event, 'Home')" id="defaultOpen">Home</button>
-                            <button class="tablinks" onclick="cityInfo(event, 'Jobs')">Jobs</button>
-                            <button class="tablinks" onclick="cityInfo(event, 'Events')">Events</button>
-                            <button class="tablinks" onclick="cityInfo(event, 'Stats')">Stats</button>
+                    <div id="Jobs" class="tabcontent">
+                        <h3>Here are some jobs in this city!</h3>
+                        <div class="panel-body">
+                            <table class="table table-hover" id="job-listings">
+                                <thead>
+                                    <tr>
+                                        <th>Job Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="city-jobs">
+                                </tbody>
+                            </table>
                         </div>
+                    </div>
 
-                        <!-- Tab content -->
-                        <div id="Home" class="tabcontent">
-                            <h3>Home</h3>
-                            <p>Welcome to our city display page. Click the Jobs tab to see jobs in this city; the Events tab
-                                to see upcoming events in this city; and the Stats tab to show statistics about this city!</p>
-                            <div class="panel-body">
-                                <form id="reset-form">
-                                    <label for="location-input">Explore Another City</label>
-                                    <input type="text" id="location-input">
-                                    <input id="select-location" type="submit" value="GO!">
-                                    <label for="job-input">Search for Another Job</label>
-                                    <input type="text" id="job-input">
-                                    <input id="select-job" type="submit" value="GO!">
-                                </form>
-                            </div>
+                    <div id="Stats" class="tabcontent">
+                        <h3>Stats</h3>
+                        <p>Here are rad stats about this town!</p>
+                        <div class="panel-body">
+                            <table class="table table-hover" id="job-listings">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="city-stats">
+
+                                </tbody>
+                            </table>
                         </div>
+                    </div>
 
-                        <div id="Jobs" class="tabcontent">
-                            <h3>Here are some jobs in this city!</h3>
-                            <div class="panel-body">
-                                <table class="table table-hover" id="job-listings">
-                                    <thead>
-                                        <tr>
-                                            <th>Job Title</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="city-jobs">
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                    <div id="Events" class="tabcontent">
+                        <h3>Check out some events in this city!</h3>
+                        <div class="panel-body">
+                            <table class="table table-hover" id="event-listings">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <form id="events-form">
+                                                <label for="location-input">Choose Your City</label>
+                                                <input type="text" id="location-input">
+                                                <input id="select-location" type="submit" value="GO!">
+                                            </form>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Event Listings</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="city-events">
 
-                        <div id="Stats" class="tabcontent">
-                            <h3>Stats</h3>
-                            <p>Here are rad stats about this town!</p>
-                            <div class="panel-body">
-                                <table class="table table-hover" id="job-listings">
-                                    <thead>
-                                        <tr>
-                                            <th>Item</th>
-                                            <th>Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="city-stats">
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div id="Events" class="tabcontent">
-                            <h3>Check out some events in this city!</h3>
-                            <div class="panel-body">
-                                <table class="table table-hover" id="event-listings">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <form id="events-form">
-                                                    <label for="location-input">Choose Your City</label>
-                                                    <input type="text" id="location-input">
-                                                    <input id="select-location" type="submit" value="GO!">
-                                                </form>
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th>Event Listings</th>
-                                            <th>Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="city-events">
-
-                                    </tbody>
-                                </table>
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

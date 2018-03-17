@@ -14,7 +14,7 @@
 
 .left {
     left: 0;
-    background: linear-gradient(to bottom right, #FCE181, #FEF9C7, #9FEDD7);
+    background: linear-gradient(to bottom right,  rgb(255, 219, 88), #FEF9C7, #9FEDD7);
     color:  #026670;
 }
 
