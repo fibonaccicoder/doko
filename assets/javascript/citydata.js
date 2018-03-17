@@ -146,8 +146,6 @@ $(document).ready(function () {
             }).then(function (response) {
                 console.log(response);
 
-                //this is not right, I don't think a for loop is needed but I'm not sure how to display the data.
-
 
                 var cityJobs = $("#city-jobs");
                 var tRow = $("<tr>");
