@@ -13,6 +13,8 @@ $(document).ready(function () {
     console.log(params);
     location = urlVariables[1];
 
+    // $("city-name").html(location);
+
     // takes the inputs from choice.html and saves them as variables
     function getInputs(html) {
         //prevent the page from refreshing
@@ -163,8 +165,8 @@ $(document).ready(function () {
                 var eventTitleTd = $("<td>");
                 eventTitleTd.append(eventLink);
                 var eventTime = $("<td>").text(response.events.event[i].start_time);
-                // var startTime = response.events.event[i].start_time;
-                // eventTime = moment(startTime).format("h:mm a");
+                var startTime = response.events.event[i].start_time;
+                eventTime = moment(startTime).format('MMMM Do YYYY');
                 tRow.append(eventTitleTd, eventTime);
                 cityEvents.append(tRow);
                 console.log(response);
