@@ -10,12 +10,6 @@ html {
     background-position: center;
 }
 
-/* .jumbotron {
-    padding-top: 60px;
-    margin: 40px 20px 40px 20px;
-    height: 100%;
-} */
-
 #city-info-panel {
     padding-top: 30px;
     opacity: 0.8;
@@ -53,7 +47,8 @@ h3 {
 
 /* Create an active/current tablink class */
 
-.tab button.focus {
+.tab button.focus,
+.tab button.active {
     /* background-color: #ccc; */
     background-color: rgb(235, 185, 93);
 }
