@@ -11,7 +11,7 @@ $(document).ready(function () {
             vars[i] = pair[1];
         }
         return (vars);
-        searchEvents(vars[1]);
+        searchEvents(vars);
 
         console.log("vars " + vars);
         console.log("urlVariables " + urlVariables);
