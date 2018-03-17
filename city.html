@@ -28,7 +28,7 @@
 
                     <!-- Tab links -->
                     <div class="tab">
-                        <button class="tablinks" onclick="cityInfo(event, 'Home')">Home</button>
+                        <button class="tablinks" onclick="cityInfo(event, 'Home')" id="defaultOpen">Home</button>
                         <button class="tablinks" onclick="cityInfo(event, 'Jobs')">Jobs</button>
                         <button class="tablinks" onclick="cityInfo(event, 'Events')">Events</button>
                         <button class="tablinks" onclick="cityInfo(event, 'Stats')">Stats</button>
@@ -39,7 +39,7 @@
                         <h3>Home</h3>
                         <p>Welcome to our city display page. Click the Jobs tab to see jobs in this city; the Events tab to
                             see upcoming events in this city; and the Stats tab to show statistics about this city!</p>
-                        <div class="panel-body" id="defaultOpen">
+                        <div class="panel-body">
                             <form id="reset-form">
                                 <label for="location-input">Explore Another City</label>
                                 <input type="text" id="location-input">
