@@ -42,8 +42,8 @@ $(document).ready(function () {
 
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
-                var nameTD = $("<td>").text(response.prices[i].item_name);
-                var priceTD = $("<td>").text("$ " + response.prices[i].average_price.toFixed(2));
+                var nameTD = $("<td>").text(response.prices[index[i]].item_name);
+                var priceTD = $("<td>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
                 console.log("index" + index);
                 tRow.append(nameTD, priceTD);
                 cityStats.append(tRow);
@@ -165,6 +165,6 @@ $(document).ready(function () {
     displayCityJobs();
 
     function getParams(keyword, location, radius, pageNum) {
-        return "{keywords: '" + keyword + "', location: '" + location + "', radius: '" + radius + "', page: '" + pageNum + "'}";
+        return "{keywords: '" + keyword + "',  location: '" + location + "', radius: '" + radius + "', page: '" + pageNum + "'}";
     }
 });
