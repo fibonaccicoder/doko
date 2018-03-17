@@ -1,6 +1,6 @@
 body,
 html {
-    /* background-color: rgb(235, 202, 142); */
+    background-color: rgb(235, 202, 142);
 }
 
 #cover {
@@ -10,16 +10,24 @@ html {
     background-position: center;
 }
 
-.jumbotron {
+/* .jumbotron {
     padding-top: 60px;
     margin: 40px 20px 40px 20px;
     height: 100%;
-}
+} */
 
 #city-info-panel {
     padding-top: 30px;
     opacity: 0.8;
     background: white;
+    margin: 20px;
+}
+
+#city-image-panel {
+    padding-top: 30px;
+    opacity: 0.8;
+    background: white;
+    margin: 20px;
 }
 
 .tab button {
