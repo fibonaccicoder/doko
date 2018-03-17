@@ -28,7 +28,7 @@
 
                     <!-- Tab links -->
                     <div class="tab">
-                        <button class="tablinks" onclick="cityInfo(event, 'Home')">Home</button>
+                        <button class="tablinks" onclick="cityInfo(event, 'Home')" id="defaultOpen">Home</button>
                         <button class="tablinks" onclick="cityInfo(event, 'Jobs')">Jobs</button>
                         <button class="tablinks" onclick="cityInfo(event, 'Events')">Events</button>
                         <button class="tablinks" onclick="cityInfo(event, 'Stats')">Stats</button>
@@ -39,11 +39,14 @@
                         <h3>Home</h3>
                         <p>Welcome to our city display page. Click the Jobs tab to see jobs in this city; the Events tab to
                             see upcoming events in this city; and the Stats tab to show statistics about this city!</p>
-                        <div class="panel-body" id="defaultOpen">
+                        <div class="panel-body">
                             <form id="reset-form">
                                 <label for="location-input">Explore Another City</label>
                                 <input type="text" id="location-input">
                                 <input id="select-location" type="submit" value="GO!">
+                                <label for="job-input">Search for Another Job</label>
+                                <input type="text" id="job-input">
+                                <input id="select-job" type="submit" value="GO!">
                             </form>
                         </div>
                     </div>
@@ -97,6 +100,7 @@
                                     </tr>
                                     <tr>
                                         <th>Event Listings</th>
+                                        <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody id="city-events">
@@ -128,6 +132,9 @@
     <script type="text/javascript " src="assets/javascript/app.js"></script>
     <script type="text/javascript " src="assets/javascript/logic.js"></script>
     <script type="text/javascript" src="assets/javascript/citycover.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </body>
 
 </html>
