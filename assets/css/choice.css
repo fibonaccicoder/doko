@@ -14,18 +14,16 @@
 
 .left {
     left: 0;
-    background-color: rgb(235, 185, 93)
-    /* background: url('../images/spiration-light2.png'); */
-    /* repeat: none; */
+    background: linear-gradient(to bottom right, #FCE181, #FEF9C7, #9FEDD7);
+    color:  #026670;
 }
 
 /* Control the right side */
 
 .right {
     right: 0;
-    background-color: rgb(104, 172, 235)
-    /* background: url('../images/spiration-dark.png'); */
-    /* repeat: none; */
+    background: linear-gradient(to bottom right, #FEF9C7, #9FEDD7, #026670);
+    color: rgb(255, 209, 44);
 }
 
 /* If you want the content centered horizontally and vertically */
