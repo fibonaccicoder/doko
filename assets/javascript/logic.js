@@ -13,7 +13,13 @@ $(document).ready(function () {
     console.log(params);
     location = urlVariables[1];
 
-    // $("city-name").html(location);
+    // alert(typeof location)
+
+    // var cityNameDisplay = location;
+    // $(".city-name").text(cityNameDisplay.replace("%20", " "));
+    // console.log("city name = " + cityNameDisplay);
+
+    $(".city-name").text(location);
 
     // takes the inputs from choice.html and saves them as variables
     function getInputs(html) {
@@ -21,7 +27,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         //get inputs from choice.html
-        location = $("#city-input").val().trim()
+        location = $("#city-input").val().trim();
         keyword = $("#job-input").val();
         console.log("location: " + location);
         console.log("keyword: " + keyword);

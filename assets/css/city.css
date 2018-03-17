@@ -91,3 +91,7 @@ h3 {
     font-family: 'Berkshire Swash', monospace;
     /* font-size: 20px; */
 }
+
+.city-name {
+    text-transform: capitalize;
+}
