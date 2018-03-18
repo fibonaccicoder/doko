@@ -51,22 +51,26 @@
                     <!-- Tab content -->
                     <div id="Home" class="tabcontent">
                         <h3>Home</h3>
-                        <p>Welcome to our city display page. Click the Jobs tab to see jobs in this city; the Events tab to
-                            see upcoming events in this city; and the Stats tab to show statistics about this city!</p>
+                        <br>
                         <div class="panel-body">
+                            <p>Welcome to our city display page. Click the Jobs tab to see jobs in this city; the Events tab
+                                to see upcoming events in this city; and the Stats tab to show statistics about this city!</p>
                             <form id="reset-form">
-                                <label for="location-input">Explore Another City</label>
+                                <label for="location-input">Choose Another City</label>
                                 <input type="text" id="location-input">
-                                <input id="select-location" type="submit" value="GO!">
-                                <label for="job-input">Search for Another Job</label>
+                                <input id="select-location" type="submit" value="Explore!">
+                                <br>
+                                <label for="job-input">Choose Another Job</label>
                                 <input type="text" id="job-input">
-                                <input id="select-job" type="submit" value="GO!">
+                                <input id="select-job" type="submit" value="Search!">
                             </form>
                         </div>
                     </div>
 
                     <div id="Jobs" class="tabcontent">
-                        <h3>Here are some jobs in this city!</h3>
+                        <h3>Jobs</h3>
+                        <br>
+                        <p>Here are job listings for this city!</p>
                         <div class="panel-body">
                             <table class="table table-hover" id="job-listings">
                                 <thead>
@@ -82,7 +86,8 @@
 
                     <div id="Stats" class="tabcontent">
                         <h3>Stats</h3>
-                        <p>Here are rad stats about this town!</p>
+                        <br>
+                        <p>Here are some statistical data for this city!</p>
                         <div class="panel-body">
                             <table class="table table-hover" id="job-listings">
                                 <thead>
@@ -99,7 +104,9 @@
                     </div>
 
                     <div id="Events" class="tabcontent">
-                        <h3>Check out some events in this city!</h3>
+                        <h3>Events</h3>
+                        <br>
+                        <p>Here are some upcoming events for this city!</p>
                         <div class="panel-body">
                             <table class="table table-hover" id="event-listings">
                                 <thead>
@@ -108,7 +115,7 @@
                                             <form id="events-form">
                                                 <label for="location-input">Choose Your City</label>
                                                 <input type="text" id="location-input">
-                                                <input id="select-location" type="submit" value="GO!">
+                                                <input id="select-location" type="submit" value="See Events!">
                                             </form>
                                         </th>
                                     </tr>
@@ -127,15 +134,14 @@
             </div>
         </div>
     </div>
-</div>
     <!-- <div class="footer">
         <p>Copyright &copy; 2018 Dukoders</p>
     </div> -->
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript " src="assets/javascript/app.js"></script>
-    <script type="text/javascript " src="assets/javascript/logic.js"></script>
-    <script type="text/javascript" src="assets/javascript/citycover.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <!-- <script type="text/javascript" src="assets/javascript/citycover.js"></script> -->
 
     <!-- Moment.js Reference -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>

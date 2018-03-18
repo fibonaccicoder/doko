@@ -213,4 +213,29 @@ $(document).ready(function () {
     }
     runNumbeo();
 
+    //city.html city-image-panel image generator through Flickr API
+    function cityImageGenerator() {
+        // var queryURL = "https://api.flickr.com/services";
+        // var key = "b5cbe7b98d8f661d255ab22ddd185ada";
+        // var secret = "745af2566ef4e668";
+        var keyword = "Albany";
+
+        var url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5cbe7b98d8f661d255ab22ddd185ada&text=" + keyword + "&safe_search=1&sort=relevance";
+        var src;
+        $.getJSON(url + "&format=json&jsoncallback=?", function (data) {
+            $.each(data.photos.photo, function (i, item) {
+                src = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg";
+
+                var pic = $("<img>");
+                pic.attr("src", src);
+                pic.addClass("city-image");
+                $("#cityImage").append(pic);
+                // $("<img/>").attr("src", src).appendTo("#cityImage");
+                // if (i == 3) return false;
+            });
+        });
+    };
+
+    cityImageGenerator();
+
 })
