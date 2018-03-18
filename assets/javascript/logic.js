@@ -203,44 +203,24 @@ $(document).ready(function () {
     // this function generates and displays the city stats
     function runNumbeo() {
         var numbeoAPIKey = "4n7468zewaj81z";
-        var unencodedNumbeoURL = 'https://www.numbeo.com/api/indices?api_key=' + numbeoAPIKey + "&query=" + location;
-        // var unencodedNumbeoURL = 'https://www.numbeo.com/api/city_prices?api_key=' + numbeoAPIKey + '&query=' + location;
+        var unencodedNumbeoURL = 'https://www.numbeo.com/api/city_prices?api_key=' + numbeoAPIKey + '&query=' + location;
         var numbeoQueryURL = encodeAndCorsBridge(unencodedNumbeoURL);
         $.ajax({
             url: numbeoQueryURL,
             method: "GET"
         }).then(function (response) {
-<<<<<<< HEAD
             console.log(response);
-            console.log("climate index: " + response.climate_index)
-            var data = [climate_index, crime_index, groceries_index, health_care_index, pollution_index, property_price_to_income_ratio, quality_of_life_index, restaurant_price_index, safety_index, traffic_index];
-            for (var i = 0; i < data.length; i++) {
-=======
-            console.log(response)
-            var index = [21, 36, 25, 27, 37, 39, 0, 3, 7, 19];
 
-            // 22, 30, 40, 41
-
+            var index = [0, 3, 7, 19, 21, 22, 25, 27, 30, 36, 37, 39, 40, 41];
             for (var i = 0; i < index.length; i++) {
->>>>>>> b29802087799733bae96ee1e2657335f2343cb50
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
-                var index = $("<td>").text(response.data[i]);
-                tRow.append(indices);
+                var nameTD = $("<td>").text(response.prices[index[i]].item_name);
+                var priceTD = $("<td>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
+                console.log("index" + index);
+                tRow.append(nameTD, priceTD);
                 cityStats.append(tRow);
-            };
-
-
-            //     var index = [0, 3, 7, 19, 21, 22, 25, 27, 30, 36, 37, 39, 40, 41];
-            //     for (var i = 0; i < index.length; i++) {
-            //         var cityStats = $("#city-stats");
-            //         var tRow = $("<tr>");
-            //         var nameTD = $("<td>").text(response.prices[index[i]].item_name);
-            //         var priceTD = $("<td>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
-            //         console.log("index" + index);
-            //         tRow.append(nameTD, priceTD);
-            //         cityStats.append(tRow);
-            // }
+            }
         });
     }
     runNumbeo();
