@@ -210,10 +210,19 @@ $(document).ready(function () {
             url: numbeoQueryURL,
             method: "GET"
         }).then(function (response) {
+<<<<<<< HEAD
             console.log(response);
             console.log("climate index: " + response.climate_index)
             var data = [climate_index, crime_index, groceries_index, health_care_index, pollution_index, property_price_to_income_ratio, quality_of_life_index, restaurant_price_index, safety_index, traffic_index];
             for (var i = 0; i < data.length; i++) {
+=======
+            console.log(response)
+            var index = [21, 36, 25, 27, 37, 39, 0, 3, 7, 19];
+
+            // 22, 30, 40, 41
+
+            for (var i = 0; i < index.length; i++) {
+>>>>>>> b29802087799733bae96ee1e2657335f2343cb50
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
                 var index = $("<td>").text(response.data[i]);
@@ -235,5 +244,30 @@ $(document).ready(function () {
         });
     }
     runNumbeo();
+
+    //city.html city-image-panel image generator through Flickr API
+    function cityImageGenerator() {
+        // var queryURL = "https://api.flickr.com/services";
+        // var key = "b5cbe7b98d8f661d255ab22ddd185ada";
+        // var secret = "745af2566ef4e668";
+        var keyword = "Albany";
+
+        var url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5cbe7b98d8f661d255ab22ddd185ada&text=" + keyword + "&safe_search=1&sort=relevance";
+        var src;
+        $.getJSON(url + "&format=json&jsoncallback=?", function (data) {
+            $.each(data.photos.photo, function (i, item) {
+                src = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg";
+
+                var pic = $("<img>");
+                pic.attr("src", src);
+                pic.addClass("city-image");
+                $("#cityImage").append(pic);
+                // $("<img/>").attr("src", src).appendTo("#cityImage");
+                // if (i == 3) return false;
+            });
+        });
+    };
+
+    cityImageGenerator();
 
 })
