@@ -13,9 +13,12 @@ $(document).ready(function () {
 
             var image_src = data.items[rnd]['media']['m'].replace("_m", "_b");
 
-            var pic = $("<img>").append(data);
+            var pic = $("<img>");
+            pic.attr("src", image_src);
+            pic.addClass("city-image");
             $("#cityImage").append(pic);
-            $('#cityImage').css('background-image', "url('" + image_src + "')");
+
+            // $('#cityImage').css('background-image', "url('" + image_src + "')");
 
         });
 

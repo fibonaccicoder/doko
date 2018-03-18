@@ -1,23 +1,23 @@
-/* Getty API key dhervdbfpw3s45yr3u8t2wud */
-
-
 body {
     background: linear-gradient(to bottom right, #026670, #9FEDD7, #FEF9C7);
     font-family: 'Roboto Mono';
     font-size: 18px;
 }
 
-#doko{
-	font-family: 'Berkshire Swash', monospace;
-	font-size: 50px;
+#doko {
+    font-family: 'Berkshire Swash', monospace;
+    font-size: 50px;
 }
 
-/* #cityImage {
-    background-size: cover;
+.city-image {
+    /* background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
-} */
+    background-position: center; */
+    max-width: 100%;
+    max-height: 100%;
+    padding: 10px;
+}
 
 #city-info-panel {
     padding-top: 30px;
@@ -28,12 +28,14 @@ body {
 
 #city-image-panel {
     padding-top: 30px;
+    margin: 10px;
     opacity: 0.8;
     background: white;
     margin: 20px;
 }
 
 .tab button {
+    background-color: linear-gradient(to right, #FCE181, #FEF9C7);
     background-color: #FCE181;
     float: left;
     border: none;
@@ -83,9 +85,7 @@ h3 {
     /* font-size: 20px; */
 }
 
-.tab-header{
-
-}
+.tab-header {}
 
 .navbar {
     color: white;
