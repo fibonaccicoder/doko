@@ -2,9 +2,12 @@ $(document).ready(function () {
 
     // initial variables
     var url = "https://us.jooble.org/api/";
-    var key = "5bbea2df-0017-4a1f-abdc-58ac3dceac09";
+    // var key = "5bbea2df-0017-4a1f-abdc-58ac3dceac09";
+    var key = "82821584-8b17-4130-abae-cdfe922601b6";
+
     var keyword = "";
     var location = "";
+    var locationDisplay = "";
     var radius = "50";
     var pageNum = 1;
     var urlVariables = getQueryVariables();
@@ -15,9 +18,9 @@ $(document).ready(function () {
 
     // alert(typeof location)
 
-    // var cityNameDisplay = location;
-    // $(".city-name").text(cityNameDisplay.replace("%20", " "));
-    // console.log("city name = " + cityNameDisplay);
+    // var cityNameDisplay = locationDisplay.replace("%20", " ");
+    // $(".city-name").text(cityNameDisplay);
+    // console.log("city name = " + locationDisplay);
 
     $(".city-name").text(location);
 
@@ -26,7 +29,15 @@ $(document).ready(function () {
         //prevent the page from refreshing
         event.preventDefault();
 
+        $("#select-job").on("click", function () {
+            alert("new job search");
+        })
+        $("#select-location").on("click", function () {
+            alert("new city");
+        })
         //get inputs from choice.html
+        // locationDisplay = $("#city-input").val().trim();
+
         location = $("#city-input").val().trim();
         keyword = $("#job-input").val();
         console.log("location: " + location);
@@ -38,14 +49,17 @@ $(document).ready(function () {
 
         var url = getURL(html, keyword, location)
         window.location.href = url
+
     }
     // this takes the inputs and leads to city.html
     $("#explore").on("click", function () {
         getInputs("city.html");
+
     })
     // this takes the inputs and leads to jobs.html
     $("#search").on("click", function () {
         getInputs("jobs.html");
+
     })
 
 
@@ -141,7 +155,7 @@ $(document).ready(function () {
                 }
             });
     }
-    displayJobs();
+    // displayJobs();
 
     // future function that will sort the job listings by city and return the number of listings for each city
     function sortResults(response) {}
@@ -189,23 +203,35 @@ $(document).ready(function () {
     // this function generates and displays the city stats
     function runNumbeo() {
         var numbeoAPIKey = "4n7468zewaj81z";
-        var unencodedNumbeoURL = 'https://www.numbeo.com/api/city_prices?api_key=' + numbeoAPIKey + '&query=' + location;
+        var unencodedNumbeoURL = 'https://www.numbeo.com/api/indices?api_key=' + numbeoAPIKey + "&query=" + location;
+        // var unencodedNumbeoURL = 'https://www.numbeo.com/api/city_prices?api_key=' + numbeoAPIKey + '&query=' + location;
         var numbeoQueryURL = encodeAndCorsBridge(unencodedNumbeoURL);
         $.ajax({
             url: numbeoQueryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response)
-            var index = [0, 3, 7, 19, 21, 22, 25, 27, 30, 36, 37, 39, 40, 41];
-            for (var i = 0; i < index.length; i++) {
+            console.log(response);
+            console.log("climate index: " + response.climate_index)
+            var data = [climate_index, crime_index, groceries_index, health_care_index, pollution_index, property_price_to_income_ratio, quality_of_life_index, restaurant_price_index, safety_index, traffic_index];
+            for (var i = 0; i < data.length; i++) {
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
-                var nameTD = $("<td>").text(response.prices[index[i]].item_name);
-                var priceTD = $("<td>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
-                console.log("index" + index);
-                tRow.append(nameTD, priceTD);
+                var index = $("<td>").text(response.data[i]);
+                tRow.append(indices);
                 cityStats.append(tRow);
-            }
+            };
+
+
+            //     var index = [0, 3, 7, 19, 21, 22, 25, 27, 30, 36, 37, 39, 40, 41];
+            //     for (var i = 0; i < index.length; i++) {
+            //         var cityStats = $("#city-stats");
+            //         var tRow = $("<tr>");
+            //         var nameTD = $("<td>").text(response.prices[index[i]].item_name);
+            //         var priceTD = $("<td>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
+            //         console.log("index" + index);
+            //         tRow.append(nameTD, priceTD);
+            //         cityStats.append(tRow);
+            // }
         });
     }
     runNumbeo();
