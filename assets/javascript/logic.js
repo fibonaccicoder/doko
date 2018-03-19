@@ -248,7 +248,7 @@ $(document).ready(function () {
         var src;
         $.getJSON(url + "&tag_mode=all&format=json&jsoncallback=?", function (data) {
             $.each(data.photos.photo, function (i, item) {
-                src = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg";
+                src = "https://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg";
                 console.log(data);
                 var pic = $("<img>");
                 pic.attr("src", src);
