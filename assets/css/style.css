@@ -1,43 +1,42 @@
+/* #inspirational-quote {
+	margin-top: 80px;
+} */
+
 .jumbotron {
 	padding: 60px;
 	margin: 60px 20px 20px 20px;
 	height: 100%;
 	background: white;
-	opacity: 0.7;
+	opacity: 0.75;
 	text-align: center;
 }
 
-h1 {
-	font-family: 'Berkshire Swash', monospace;
-	/* font-size: 20px; */
-}
-
-.btn {
+.btn{
 	font-family: 'Roboto Mono';
 }
 
-#doko {
+#doko{
 	font-family: 'Berkshire Swash', monospace;
 	font-size: 80px;
 }
 
-#lead {
+#lead{
 	font-family: 'Roboto Mono';
-	font-size: 22px;
+	font-size:22px;
 }
 
 #quote {
-	font-family: 'Open Sans';
+	font-family: 'Roboto Mono';
 	text-align: center;
 	/* color: #ffffff; */
-	font-size: 26px;
+	font-size: 24px;
 }
 
 #author {
 	font-family: 'Tangerine', monospace;
 	font-size: 40px;
 	/* color: #ffffff; */
-	text-align: center;
+	text-align:center;
 	clear: both;
 }
 
