@@ -4,9 +4,10 @@ $(document).ready(function () {
     var url = "https://us.jooble.org/api/";
     // var key = "5bbea2df-0017-4a1f-abdc-58ac3dceac09";
     var key = "82821584-8b17-4130-abae-cdfe922601b6";
-
+    var eventfulURL = "";
     var keyword = "";
     var location = "";
+    var category = "";
     var locationDisplay = "";
     var radius = "50";
     var pageNum = 1;
@@ -170,11 +171,19 @@ $(document).ready(function () {
         return "https://corsbridge.herokuapp.com/" + encodeURIComponent(url)
     }
 
+    $("#category").on("click", function () {
+        category = $("#category-input").val().trim();
+        console.log("category" + category);
+        searchEvents();
+        console.log("eventfulURL" + eventfulURL);
+    });
+
+
     // displays the events tab on city.html
     function searchEvents() {
-        var queryURL = "http://api.eventful.com/json/events/search?app_key=KdNhpLh2wR3FMTL6&keywords=music&location=" + location + "&date=Future";
+        var eventfulURL = "http://api.eventful.com/json/events/search?app_key=KdNhpLh2wR3FMTL6&location=" + location + "&date=Future&category=" + category;
         $.ajax({
-            url: 'https://corsbridge.herokuapp.com/' + encodeURIComponent(queryURL),
+            url: 'https://corsbridge.herokuapp.com/' + encodeURIComponent(eventfulURL),
             method: "GET",
             dataType: 'json'
         }).then(function (response) {
@@ -234,9 +243,9 @@ $(document).ready(function () {
         // var queryURL = "https://api.flickr.com/services";
         // var key = "b5cbe7b98d8f661d255ab22ddd185ada";
         // var secret = "745af2566ef4e668";
-        var keyword = "Tucson, city";
+        // var keyword = "Austin";
         // var city = "city";
-        var url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5cbe7b98d8f661d255ab22ddd185ada&text=" + keyword + "&safe_search=1&sort=relevance";
+        var url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5cbe7b98d8f661d255ab22ddd185ada&text=city%20" + location + "&safe_search=1&sort=relevance";
         var src;
         $.getJSON(url + "&tag_mode=all&format=json&jsoncallback=?", function (data) {
             $.each(data.photos.photo, function (i, item) {
@@ -246,6 +255,7 @@ $(document).ready(function () {
                 pic.attr("src", src);
                 pic.addClass("city-image");
                 $("#cityImage").append(pic);
+                console.log("url" + url);
                 // $("<img/>").attr("src", src).appendTo("#cityImage");
                 // if (i == 3) return false;
             });
