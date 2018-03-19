@@ -45,12 +45,12 @@ $(document).ready(function () {
         window.location.href = url
 
     }
-    $("#select-job").on("click", function () {
-        alert("new job search");
-    })
-    $("#select-location").on("click", function () {
-        alert("new city");
-    })
+    // $("#select-job").on("click", function () {
+    //     alert("new job search");
+    // })
+    // $("#select-location").on("click", function () {
+    //     alert("new city");
+    // })
     // this takes the inputs and leads to city.html
     $("#explore").on("click", function () {
         getInputs("city.html");
