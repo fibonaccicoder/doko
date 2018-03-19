@@ -14,7 +14,7 @@
 <body>
     <div id="container">
         <nav class="navbar">
-            <a class="navbar-brand" href="index.html">
+            <a id="logo-btn" class="navbar-brand" href="index.html">
                 <span id="doko">doko</span> - find where you belong</a>
         </nav>
 
@@ -51,16 +51,18 @@
                     <!-- Tab content -->
                     <div id="Home" class="tabcontent">
                         <h3>Home</h3>
+                        <br>
                         <div class="panel-body">
                             <p>Welcome to our city display page. Click the Jobs tab to see jobs in this city; the Events tab
                                 to see upcoming events in this city; and the Stats tab to show statistics about this city!</p>
                             <form id="reset-form">
                                 <label for="location-input">Choose Another City</label>
                                 <input type="text" id="location-input">
-                                <input id="explore select-location" type="submit" value="GO!">
-                                <label for="job-input">Search for Another Job</label>
+                                <input id="select-location" type="submit" value="Explore!">
+                                <br>
+                                <label for="job-input">Choose Another Job</label>
                                 <input type="text" id="job-input">
-                                <input id="select-job search" type="submit" value="GO!">
+                                <input id="select-job" type="submit" value="Search!">
                             </form>
                         </div>
                     </div>
@@ -137,12 +139,12 @@
     </div> -->
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="assets/javascript/app.js"></script> -->
+    <script type="text/javascript" src="assets/javascript/city.js"></script>
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <!-- <script type="text/javascript" src="assets/javascript/citycover.js"></script> -->
 
     <!-- Moment.js Reference -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
 </body>
 
 </html>
