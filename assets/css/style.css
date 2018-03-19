@@ -3,7 +3,7 @@
 	margin: 60px 20px 20px 20px;
 	height: 100%;
 	background: white;
-	opacity: 0.55;
+	opacity: 0.7;
 	text-align: center;
 }
 
@@ -12,18 +12,18 @@ h1 {
 	/* font-size: 20px; */
 }
 
-.btn{
+.btn {
 	font-family: 'Roboto Mono';
 }
 
-#doko{
+#doko {
 	font-family: 'Berkshire Swash', monospace;
 	font-size: 80px;
 }
 
-#lead{
+#lead {
 	font-family: 'Roboto Mono';
-	font-size:22px;
+	font-size: 22px;
 }
 
 #quote {
@@ -37,7 +37,7 @@ h1 {
 	font-family: 'Tangerine', monospace;
 	font-size: 40px;
 	/* color: #ffffff; */
-	text-align:center;
+	text-align: center;
 	clear: both;
 }
 
