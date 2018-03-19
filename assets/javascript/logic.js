@@ -148,14 +148,18 @@ $(document).ready(function () {
                     var jobLink = $("<a>").text(response.jobs[i].title)
                     jobLink.attr("href", response.jobs[i].link);
                     jobLink.attr('target', '_blank');
+
                     var jobTitleTd = $("<td>");
                     jobTitleTd.append(jobLink);
-                    tRow.append(jobTitleTd);
+
+                    var jobCompanyTd = $("<td>").text(response.jobs[i].company);
+
+                    tRow.append(jobTitleTd, jobCompanyTd);
                     cityJobs.append(tRow);
                 }
             });
     }
-    // displayJobs();
+    displayJobs();
 
     // future function that will sort the job listings by city and return the number of listings for each city
     function sortResults(response) {}
