@@ -53,8 +53,10 @@
                         <h3>Home</h3>
                         <br>
                         <div class="panel-body">
-                            <p>Welcome to our city display page. Click the Jobs tab to see jobs in this city; the Events tab
-                                to see upcoming events in this city; and the Stats tab to show statistics about this city!</p>
+                            <p>Welcome to the
+                                <strong>doko</strong> city display page. Click the "Jobs" tab to see jobs in this city; the "Events"
+                                tab to see upcoming events in this city; and the "Stats" tab to show some statistics about
+                                this city!</p>
                             <form id="reset-form">
                                 <label for="location-input">Choose Another City</label>
                                 <input type="text" id="location-input">
@@ -76,6 +78,7 @@
                                 <thead>
                                     <tr>
                                         <th>Job Title</th>
+                                        <th>Company</th>
                                     </tr>
                                 </thead>
                                 <tbody id="city-jobs">
@@ -112,11 +115,18 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            <form id="events-form">
-                                                <label for="location-input">Choose Your City</label>
-                                                <input type="text" id="location-input">
-                                                <input id="select-location" type="submit" value="See Events!">
-                                            </form>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="category-input">
+                                                <br>
+                                                <span class="input-group-btn">
+                                                    <a class="btn btn-default submit" id="category" type="button">See Events!</a>
+                                                </span>
+                                            </div>
+                                            <!-- <form id="events-form">
+                                                <label for="category-input">Choose a Category (e.g., music, sports, theatre, etc.)</label>
+                                                <input type="text" id="category-input">
+                                                <input id="select-category" type="submit" value="See Events!">
+                                            </form> -->
                                         </th>
                                     </tr>
                                     <tr>
@@ -139,9 +149,8 @@
     </div> -->
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/city.js"></script>
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
-    <!-- <script type="text/javascript" src="assets/javascript/citycover.js"></script> -->
 
     <!-- Moment.js Reference -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>

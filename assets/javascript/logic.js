@@ -2,9 +2,13 @@ $(document).ready(function () {
 
     // initial variables
     var url = "https://us.jooble.org/api/";
-    var key = "5bbea2df-0017-4a1f-abdc-58ac3dceac09";
+    // var key = "5bbea2df-0017-4a1f-abdc-58ac3dceac09";
+    var key = "82821584-8b17-4130-abae-cdfe922601b6";
+    var eventfulURL = "";
     var keyword = "";
     var location = "";
+    var category = "";
+    var locationDisplay = "";
     var radius = "50";
     var pageNum = 1;
     var urlVariables = getQueryVariables();
@@ -15,9 +19,9 @@ $(document).ready(function () {
 
     // alert(typeof location)
 
-    // var cityNameDisplay = location;
-    // $(".city-name").text(cityNameDisplay.replace("%20", " "));
-    // console.log("city name = " + cityNameDisplay);
+    // var cityNameDisplay = locationDisplay.replace("%20", " ");
+    // $(".city-name").text(cityNameDisplay);
+    // console.log("city name = " + locationDisplay);
 
     $(".city-name").text(location);
 
@@ -27,6 +31,8 @@ $(document).ready(function () {
         event.preventDefault();
 
         //get inputs from choice.html
+        // locationDisplay = $("#city-input").val().trim();
+
         location = $("#city-input").val().trim();
         keyword = $("#job-input").val();
         console.log("location: " + location);
@@ -38,14 +44,23 @@ $(document).ready(function () {
 
         var url = getURL(html, keyword, location)
         window.location.href = url
+
     }
+    // $("#select-job").on("click", function () {
+    //     alert("new job search");
+    // })
+    // $("#select-location").on("click", function () {
+    //     alert("new city");
+    // })
     // this takes the inputs and leads to city.html
     $("#explore").on("click", function () {
         getInputs("city.html");
+
     })
     // this takes the inputs and leads to jobs.html
     $("#search").on("click", function () {
         getInputs("jobs.html");
+
     })
 
 
@@ -134,9 +149,13 @@ $(document).ready(function () {
                     var jobLink = $("<a>").text(response.jobs[i].title)
                     jobLink.attr("href", response.jobs[i].link);
                     jobLink.attr('target', '_blank');
+
                     var jobTitleTd = $("<td>");
                     jobTitleTd.append(jobLink);
-                    tRow.append(jobTitleTd);
+
+                    var jobCompanyTd = $("<td>").text(response.jobs[i].company);
+
+                    tRow.append(jobTitleTd, jobCompanyTd);
                     cityJobs.append(tRow);
                 }
             });
@@ -152,11 +171,19 @@ $(document).ready(function () {
         return "https://corsbridge.herokuapp.com/" + encodeURIComponent(url)
     }
 
+    $("#category").on("click", function () {
+        category = $("#category-input").val().trim();
+        console.log("category" + category);
+        searchEvents();
+        console.log("eventfulURL" + eventfulURL);
+    });
+
+
     // displays the events tab on city.html
     function searchEvents() {
-        var queryURL = "http://api.eventful.com/json/events/search?app_key=KdNhpLh2wR3FMTL6&keywords=music&location=" + location + "&date=Future";
+        var eventfulURL = "http://api.eventful.com/json/events/search?app_key=KdNhpLh2wR3FMTL6&location=" + location + "&date=Future&category=" + category;
         $.ajax({
-            url: 'https://corsbridge.herokuapp.com/' + encodeURIComponent(queryURL),
+            url: 'https://corsbridge.herokuapp.com/' + encodeURIComponent(eventfulURL),
             method: "GET",
             dataType: 'json'
         }).then(function (response) {
@@ -195,11 +222,9 @@ $(document).ready(function () {
             url: numbeoQueryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response)
-            var index = [21, 36, 25, 27, 37, 39, 0, 3, 7, 19];
+            console.log(response);
 
-            // 22, 30, 40, 41
-
+            var index = [0, 3, 7, 19, 21, 22, 25, 27, 30, 36, 37, 39, 40, 41];
             for (var i = 0; i < index.length; i++) {
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
@@ -222,15 +247,15 @@ $(document).ready(function () {
 
         var url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5cbe7b98d8f661d255ab22ddd185ada&text=" + keyword + "&safe_search=1&sort=relevance";
         var src;
-        $.getJSON(url + "&format=json&jsoncallback=?", function (data) {
+        $.getJSON(url + "&tag_mode=all&format=json&jsoncallback=?", function (data) {
             $.each(data.photos.photo, function (i, item) {
                 src = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg";
-
+                console.log(data);
                 var pic = $("<img>");
                 pic.attr("src", src);
                 pic.addClass("city-image");
                 $("#cityImage").append(pic);
-                // $("<img/>").attr("src", src).appendTo("#cityImage");
+                console.log("url" + url);
                 // if (i == 3) return false;
             });
         });
