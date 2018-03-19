@@ -34,9 +34,18 @@ body {
     margin: 20px;
 }
 
+/* Style the tab */
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
 .tab button {
-    background-color: linear-gradient(to right, #FCE181, #FEF9C7);
-    background-color: #FCE181;
+    /* background-color: linear-gradient(to right, #FCE181, #FEF9C7);
+    background-color: #FCE181; */
+    background-color: inherit;
     float: left;
     border: none;
     outline: none;
@@ -49,19 +58,23 @@ h3 {
     text-align: center;
 }
 
-/* Change background color of buttons on hover */
+/* Change background color of buttons */
 
 .tab button:hover {
-    /* background-color: #ddd; */
-    background-color: rgb(235, 185, 93);
+    background-color: rgb(235, 199, 133);
 }
 
-/* Create an active/current tablink class */
+/* .tab button.active {
+    background-color: rgb(236, 165, 32);
+} */
 
-.tab button.focus {
-    /* background-color: #ccc; */
-    background-color: rgb(235, 185, 93);
+.tab button.selected {
+    background-color: rgb(236, 165, 32);
 }
+
+/* .tab button:focus {
+    background-color: rgb(233, 177, 74);
+} */
 
 /* Style the tab content */
 
