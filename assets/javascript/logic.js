@@ -213,19 +213,50 @@ $(document).ready(function () {
     }
     runNumbeo();
 
+    //set up display tabs for city-info-panel
+    function cityInfo(event, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablink;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablink = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablink.length; i++) {
+            tablink[i].className = tablink[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active";
+    }
+
+    //Default Open the "Home" tab on the city.html page
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+    $('button').on('click', function () {
+        $('button').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
     //city.html city-image-panel image generator through Flickr API
     function cityImageGenerator() {
         // var queryURL = "https://api.flickr.com/services";
         // var key = "b5cbe7b98d8f661d255ab22ddd185ada";
         // var secret = "745af2566ef4e668";
-        var keyword = "Albany";
-
+        var keyword = "Tucson, city";
+        // var city = "city";
         var url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5cbe7b98d8f661d255ab22ddd185ada&text=" + keyword + "&safe_search=1&sort=relevance";
         var src;
-        $.getJSON(url + "&format=json&jsoncallback=?", function (data) {
+        $.getJSON(url + "&tag_mode=all&format=json&jsoncallback=?", function (data) {
             $.each(data.photos.photo, function (i, item) {
                 src = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg";
-
+                console.log(data);
                 var pic = $("<img>");
                 pic.attr("src", src);
                 pic.addClass("city-image");
