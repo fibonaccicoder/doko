@@ -29,12 +29,7 @@ $(document).ready(function () {
         //prevent the page from refreshing
         event.preventDefault();
 
-        $("#select-job").on("click", function () {
-            alert("new job search");
-        })
-        $("#select-location").on("click", function () {
-            alert("new city");
-        })
+
         //get inputs from choice.html
         // locationDisplay = $("#city-input").val().trim();
 
@@ -51,6 +46,12 @@ $(document).ready(function () {
         window.location.href = url
 
     }
+    $("#select-job").on("click", function () {
+        alert("new job search");
+    })
+    $("#select-location").on("click", function () {
+        alert("new city");
+    })
     // this takes the inputs and leads to city.html
     $("#explore").on("click", function () {
         getInputs("city.html");
