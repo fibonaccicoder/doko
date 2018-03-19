@@ -244,8 +244,7 @@ $(document).ready(function () {
         // var key = "b5cbe7b98d8f661d255ab22ddd185ada";
         // var secret = "745af2566ef4e668";
         // var keyword = "Austin";
-        // var city = "city";
-        var url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5cbe7b98d8f661d255ab22ddd185ada&text=city%20" + location + "&safe_search=1&sort=relevance";
+        var url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5cbe7b98d8f661d255ab22ddd185ada&text=city%20" + location + "&safe_search=1&sort=relevance&per_page=3";
         var src;
         $.getJSON(url + "&tag_mode=all&format=json&jsoncallback=?", function (data) {
             $.each(data.photos.photo, function (i, item) {
@@ -256,7 +255,6 @@ $(document).ready(function () {
                 pic.addClass("city-image");
                 $("#cityImage").append(pic);
                 console.log("url" + url);
-                // $("<img/>").attr("src", src).appendTo("#cityImage");
                 // if (i == 3) return false;
             });
         });

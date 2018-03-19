@@ -1,6 +1,7 @@
 body {
     background: linear-gradient(to bottom right, #026670, #9FEDD7, #FEF9C7);
-    font-family: 'Roboto Mono';
+    /* font-family: 'Roboto Mono'; */
+    font-family: 'Varela', monospace;
     font-size: 18px;
 }
 
