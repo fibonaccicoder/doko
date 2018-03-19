@@ -2,9 +2,12 @@ $(document).ready(function () {
 
     // initial variables
     var url = "https://us.jooble.org/api/";
-    var key = "5bbea2df-0017-4a1f-abdc-58ac3dceac09";
+    // var key = "5bbea2df-0017-4a1f-abdc-58ac3dceac09";
+    var key = "82821584-8b17-4130-abae-cdfe922601b6";
+
     var keyword = "";
     var location = "";
+    var locationDisplay = "";
     var radius = "50";
     var pageNum = 1;
     var urlVariables = getQueryVariables();
@@ -15,9 +18,9 @@ $(document).ready(function () {
 
     // alert(typeof location)
 
-    // var cityNameDisplay = location;
-    // $(".city-name").text(cityNameDisplay.replace("%20", " "));
-    // console.log("city name = " + cityNameDisplay);
+    // var cityNameDisplay = locationDisplay.replace("%20", " ");
+    // $(".city-name").text(cityNameDisplay);
+    // console.log("city name = " + locationDisplay);
 
     $(".city-name").text(location);
 
@@ -26,7 +29,15 @@ $(document).ready(function () {
         //prevent the page from refreshing
         event.preventDefault();
 
+        $("#select-job").on("click", function () {
+            alert("new job search");
+        })
+        $("#select-location").on("click", function () {
+            alert("new city");
+        })
         //get inputs from choice.html
+        // locationDisplay = $("#city-input").val().trim();
+
         location = $("#city-input").val().trim();
         keyword = $("#job-input").val();
         console.log("location: " + location);
@@ -38,14 +49,17 @@ $(document).ready(function () {
 
         var url = getURL(html, keyword, location)
         window.location.href = url
+
     }
     // this takes the inputs and leads to city.html
     $("#explore").on("click", function () {
         getInputs("city.html");
+
     })
     // this takes the inputs and leads to jobs.html
     $("#search").on("click", function () {
         getInputs("jobs.html");
+
     })
 
 
@@ -141,7 +155,7 @@ $(document).ready(function () {
                 }
             });
     }
-    displayJobs();
+    // displayJobs();
 
     // future function that will sort the job listings by city and return the number of listings for each city
     function sortResults(response) {}
@@ -195,11 +209,9 @@ $(document).ready(function () {
             url: numbeoQueryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response)
-            var index = [21, 36, 25, 27, 37, 39, 0, 3, 7, 19];
+            console.log(response);
 
-            // 22, 30, 40, 41
-
+            var index = [0, 3, 7, 19, 21, 22, 25, 27, 30, 36, 37, 39, 40, 41];
             for (var i = 0; i < index.length; i++) {
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
