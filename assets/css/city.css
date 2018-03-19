@@ -1,4 +1,8 @@
-body {
+body,html {
+    min-height: 100%;
+    margin: 0;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
     background: linear-gradient(to bottom right, #026670, #9FEDD7, #FEF9C7);
     font-family: 'Roboto Mono';
     font-size: 18px;
@@ -108,4 +112,16 @@ h3 {
 
 td {
     font-family: 'Varela', monospace;
+}
+
+#logo-btn:visited {
+    color:#ffffff;
+}
+
+#logo-btn:hover {
+    color: #FCE181;
+}
+
+#logo-btn:active {
+    color: #FEF9C7;
 }

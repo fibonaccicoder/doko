@@ -1,8 +1,12 @@
 /* Jooble API only to be used on presentation day 7394bf1d-6c72-487d-9766-8c32c01ac3b2 */
 
 
-body{
-    background: linear-gradient(to bottom right, rgb(255, 219, 88), #FEF9C7, #9FEDD7);
+body,html{
+    min-height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(to bottom right, #9FEDD7, #026670, #FEF9C7 );
 }
 
 #job-panel {
@@ -57,4 +61,16 @@ body{
 
 td {
     font-family: 'Varela', monospace;
+}
+
+#logo-btn:visited {
+    color:#ffffff;
+}
+
+#logo-btn:hover {
+    color: #FCE181;
+}
+
+#logo-btn:active {
+    color: #FEF9C7;
 }

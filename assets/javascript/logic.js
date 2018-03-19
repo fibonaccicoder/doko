@@ -218,7 +218,7 @@ $(document).ready(function () {
         // var queryURL = "https://api.flickr.com/services";
         // var key = "b5cbe7b98d8f661d255ab22ddd185ada";
         // var secret = "745af2566ef4e668";
-        var keyword = "Albany";
+        var keyword = "Tucson";
 
         var url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5cbe7b98d8f661d255ab22ddd185ada&text=" + keyword + "&safe_search=1&sort=relevance";
         var src;
