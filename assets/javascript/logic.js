@@ -17,12 +17,7 @@ $(document).ready(function () {
     console.log(params);
     location = urlVariables[1];
 
-    // alert(typeof location)
-
-    // var cityNameDisplay = locationDisplay.replace("%20", " ");
-    // $(".city-name").text(cityNameDisplay);
-    // console.log("city name = " + locationDisplay);
-
+    // displays the city name on city.html
     $(".city-name").text(decodeURI(location));
 
     // takes the inputs from choice.html and saves them as variables
@@ -105,6 +100,7 @@ $(document).ready(function () {
     $("#previous-button").on("click", function () {
         changePageNum(pageNum--);
     })
+
     // display the page number on the page
     $("#page-number").text("Page " + pageNum);
 
