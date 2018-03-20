@@ -7,6 +7,7 @@ beige #FEF9C7
 orange #FCE181
 grey #EDEAE5 */
 
+
 body,
 html {
     min-height: 100%;
@@ -14,7 +15,11 @@ html {
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
     background: linear-gradient(to bottom right, #FCE181,#FEF9C7, #ffffff);
-    font-size: 18px;
+    font-family: 'Varela';
+}
+
+h3{
+    font-size: 36px;
 }
 
 /* body, html{
@@ -27,13 +32,18 @@ html {
 } */
 
 a{
-    color: #026670;
+    color: #01545c;
     font-family: 'Varela';
 }
 
 .btn{
     color: #ffffff;
     background-color: #026670;
+}
+
+#page-number{
+    font-family: 'Varela';
+    font-size:18px;
 }
 
 #job-panel {

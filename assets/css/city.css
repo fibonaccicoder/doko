@@ -4,9 +4,13 @@ html {
     margin: 0;
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
-    background: linear-gradient(to bottom right, #026670, #9FEDD7, #FEF9C7);
-    font-family: 'Raleway', monospace;
+    background: linear-gradient(to bottom right, #026670, #9FEDD7, #ffffff);
+    font-family: 'Varela', monospace;
     font-size: 18px;
+}
+
+h4{
+    text-align: center;
 }
 
 .btn{
@@ -72,10 +76,6 @@ html {
     transition: 0.3s;
 }
 
-h3 {
-    text-align: center;
-}
-
 /* Change background color of buttons */
 
 .tab button:hover {
@@ -96,11 +96,40 @@ h3 {
 
 /* Style the tab content */
 
+.tablinks{
+    font-family: 'Varela';
+    font-size:20px;
+    font-weight: bold;
+}
+
+a, href{
+    color: #01545c;
+    font-family: 'Varela';
+}
+
+h3,h2{
+    text-align:center;
+    font-family: 'Varela';
+}
+
+#stats{
+    font-family: 'Varela';
+}
+
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding-left:50px;
+    padding-right:50px;
     border: 1px solid #ccc;
     border-top: none;
+    font-family: 'Varela';
+    font-size: 20px;
+    padding-bottom: 60px;
+}
+
+.tab-header{
+    font-family: 'Varela';
+    font-size:22px;
 }
 
 .footer {
@@ -116,7 +145,9 @@ h3 {
     /* font-size: 20px; */
 }
 
-.tab-header {}
+.tab-header {
+    font-family: 'Varela';
+}
 
 .navbar {
     color: white;
