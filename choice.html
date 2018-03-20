@@ -22,9 +22,10 @@
 				<input type="text" class="form-control" id="city-input">
 				<br>
 				<span class="input-group-btn"></span>
-					<a href="city.html" class="btn submit" id="explore" type="button">Explore!</a>
+				<a href="city.html" class="btn submit" id="explore" type="button">Explore!</a>
 			</div>
 			<p>Find out if it's the place for you</p>
+
 		</div>
 	</div>
 
@@ -35,17 +36,58 @@
 				<input type="text" id="job-input" class="form-control">
 				<br>
 				<span class="input-group-btn"></span>
-					<a href="jobs.html" class="btn submit" id="search" type="button">Search!</a>
+				<a href="jobs.html" class="btn submit" id="search" type="button">Search!</a>
 			</div>
 			<p>Find out where your dream job is</p>
 		</div>
 
+	</div>
+	<div class="modal explore-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Input Required</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Please enter a city name.</p>
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal search-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Input Required</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Please enter a job keyword.</p>
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- jquery CDN -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="assets/javascript/logic.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	    crossorigin="anonymous"></script>
 
 </body>
 

@@ -3,7 +3,7 @@ $(document).ready(function () {
     // initial variables
     var url = "https://us.jooble.org/api/";
     // var key = "5bbea2df-0017-4a1f-abdc-58ac3dceac09";
-    var key = "82821584-8b17-4130-abae-cdfe922601b6";
+    var key = "7394bf1d-6c72-487d-9766-8c32c01ac3b2";
     var eventfulURL = "";
     var keyword = "";
     var location = "";
@@ -48,30 +48,40 @@ $(document).ready(function () {
     //     alert("new city");
     // })
     // this takes the inputs and leads to city.html
-    $("#explore").on("click", function () {
-        getInputs("city.html");
-        inputValidator();
+    $("#explore").on("click", function (event) {
+        event.preventDefault();
+        if (inputValidator($("#city-input").val()) === true) {
+            getInputs("city.html");
+        } else $(".explore-modal").modal("show")
+
 
     })
     // this takes the inputs and leads to jobs.html
-    $("#search").on("click", function () {
-        getInputs("jobs.html");
+    $("#search").on("click", function (event) {
+        event.preventDefault();
+        if (inputValidator($("#job-input").val()) === true) {
+            getInputs("jobs.html");
+        } else $(".search-modal").modal("show")
 
     })
 
     function inputValidator(html) {
+        return /^[A-Za-z ]+$/.test(html);
+
+
         // location = $("#city-input").val().trim();
         // console.log("user-input= " + userInput);
-        var validArr = /^[A-Za-z]+$/;
+        // var validArr = /^[A-Za-z]+$/;
 
-        if (location.valueOf().match(validArr)) {
+        // if (location.valueOf().match(validArr)) {
+        //     isValid = true
 
-            alert("success")
-        } else {
+        //     alert("success")
+        // } else {
 
-            alert("fail")
+        //     alert("fail")
 
-        }
+        // }
     }
 
 
@@ -251,8 +261,8 @@ $(document).ready(function () {
             for (var i = 0; i < index.length; i++) {
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
-                var nameTD = $("<td id = 'item-name'>").text(response.prices[index[i]].item_name);
-                var priceTD = $("<td id = 'item-price'>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
+                var nameTD = $("<td>").text(response.prices[index[i]].item_name);
+                var priceTD = $("<td>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
                 console.log("index" + index);
                 tRow.append(nameTD, priceTD);
                 cityStats.append(tRow);
