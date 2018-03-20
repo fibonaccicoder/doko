@@ -5,9 +5,18 @@ html {
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
     background: linear-gradient(to bottom right, #026670, #9FEDD7, #FEF9C7);
-    /* font-family: 'Roboto Mono'; */
-    font-family: 'Varela', monospace;
+    font-family: 'Raleway', monospace;
     font-size: 18px;
+}
+
+.btn{
+    background-color: #026670;
+    color:#ffffff;
+}
+
+.input-group-btn{
+    background-color: #026670;
+    color:#ffffff;
 }
 
 #doko {
@@ -78,7 +87,7 @@ h3 {
 } */
 
 .tab button.selected {
-    background-color: rgb(236, 165, 32);
+    background-color: rgb(230, 174, 72);
 }
 
 /* .tab button:focus {
@@ -126,10 +135,16 @@ h3 {
 
 .city-name {
     text-transform: capitalize;
+    text-size: 20px;
 }
 
 td {
     font-family: 'Varela', monospace;
+}
+
+#logo-btn{
+    font-family: 'Roboto Mono';
+    font-size: 18px;
 }
 
 #logo-btn:visited {
