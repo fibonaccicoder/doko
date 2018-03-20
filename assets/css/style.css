@@ -5,9 +5,6 @@ beige #FEF9C7
 orange #FCE181
 grey #EDEAE5 */
 
-/* #inspirational-quote {
-	margin-top: 80px;
-} */
 
 .jumbotron {
 	margin-top: 60px;
@@ -18,9 +15,9 @@ grey #EDEAE5 */
 	text-align: center;
 }
 
-#quote {
-	font-family: 'Roboto Slab', serif;
-	font-size: 20px;
+#quote{
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
 	padding-left:70px;
 	padding-right:70px;
 }
@@ -53,9 +50,9 @@ grey #EDEAE5 */
 
 #author {
 	font-family: 'Tangerine', monospace;
-	font-size: 30px;
-	text-align: right;
-	padding-right: 200px;
+	font-size: 36px;
+	text-align:right;
+	padding-right:200px;
 	clear: both;
 }
 

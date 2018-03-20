@@ -12,13 +12,13 @@ html {
     overflow-y: scroll;
     min-height: 100%;
     margin: 0;
-    /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */
     background: linear-gradient(to bottom right, #FCE181, #FEF9C7, #ffffff);
+    font-size: 18px;
 }
 
 a {
     color: #026670;
+    font-family: 'Varela';
 }
 
 .btn {
@@ -35,6 +35,7 @@ a {
 #doko {
     font-family: 'Berkshire Swash', monospace;
     font-size: 40px;
+    font-size: 50px;
 }
 
 #job-search-title,
@@ -81,16 +82,22 @@ td {
     font-family: 'Varela', monospace;
 }
 
-#logo-btn:visited {
-    color: #ffffff;
+#logo-btn {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
 }
 
-#logo-btn:hover {
+#logo-btn:visited {
+    color: #ffffff;
     color: #026670;
 }
 
-#logo-btn:active {
+#logo-btn:hover {
     color: #9FEDD7;
+}
+
+#logo-btn:active {
+    color: #026670;
 }
 
 #button-line {
