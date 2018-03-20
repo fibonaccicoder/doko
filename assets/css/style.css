@@ -11,41 +11,49 @@ grey #EDEAE5 */
 } */
 
 .jumbotron {
-	padding: 60px;
-	margin: 60px 20px 20px 20px;
+	margin-top: 60px;
+	padding-bottom:10px;
 	height: 100%;
-	background: white;
+	background: rgb(245, 240, 240);
 	opacity: 0.75;
 	text-align: center;
 }
 
+#quote{
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+}
+
+#enter-button{
+	background-color: #026670;
+	color: #ffffff;
+}
 .btn{
 	font-family: 'Roboto Mono';
-	color: #026670;
+	margin-right:auto;
+	margin-left:auto;
+	align:center;
+	opacity:1.0;
 }
 
 #doko{
-	font-family: 'Berkshire Swash', monospace;
-	font-size: 80px;
+	font-family:'Berkshire Swash',monospace;
+	font-size:100px;
+	text-align:center;
 }
 
 #lead{
+	text-align:center;
 	font-family: 'Roboto Mono';
 	font-size:22px;
-}
-
-#quote {
-	font-family: 'Roboto Mono';
-	text-align: center;
-	/* color: #ffffff; */
-	font-size: 24px;
+	color:#026670;
 }
 
 #author {
 	font-family: 'Tangerine', monospace;
-	font-size: 40px;
-	/* color: #ffffff; */
-	text-align:center;
+	font-size: 30px;
+	text-align:right;
+	padding-right:200px;
 	clear: both;
 }
 
