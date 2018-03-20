@@ -91,3 +91,15 @@ td {
 #logo-btn:active {
     color: #FEF9C7;
 }
+#button-line{
+    display:inline-block;
+}
+#button-line > #previous-button{
+    display:inline-block;
+}
+#button-line > #page-number{
+    display:inline-block;
+}
+#button-line > #next-button{
+    display:inline-block;
+}

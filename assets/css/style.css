@@ -6,19 +6,17 @@ orange #FCE181
 grey #EDEAE5 */
 
 
+/* #inspirational-quote {
+	margin-top: 80px;
+} */
 
 .jumbotron {
 	padding: 60px;
 	margin: 60px 20px 20px 20px;
 	height: 100%;
 	background: white;
-	opacity: 0.55;
+	opacity: 0.75;
 	text-align: center;
-}
-
-h1 {
-	font-family: 'Berkshire Swash', monospace;
-	/* font-size: 20px; */
 }
 
 .btn{
@@ -37,10 +35,10 @@ h1 {
 }
 
 #quote {
-	font-family: 'Open Sans';
+	font-family: 'Roboto Mono';
 	text-align: center;
 	/* color: #ffffff; */
-	font-size: 26px;
+	font-size: 24px;
 }
 
 #author {
