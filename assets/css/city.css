@@ -3,12 +3,21 @@ html {
     overflow-y: scroll;
     min-height: 100%;
     margin: 0;
-    background: linear-gradient(to bottom right, #026670, #9FEDD7, #FEF9C7);
-    font-family: 'Raleway', monospace;
+    background-attachment: fixed;
+    background: linear-gradient(to bottom right, #026670, #9FEDD7, #ffffff);
+    font-family: 'Varela', monospace;
     font-size: 18px;
 }
 
-.btn {
+#company-name, #event-date, #item-name, #item-price{
+    font-family: 'Varela';
+}
+
+h4{
+    text-align: center;
+}
+
+.btn{
     background-color: #026670;
     color: #ffffff;
 }
@@ -20,11 +29,7 @@ html {
 
 #doko {
     font-family: 'Berkshire Swash', monospace;
-    font-size: 50px;
-}
-
-#cityImage {
-    align-content: center;
+    font-size: 60px;
 }
 
 .city-image {
@@ -32,9 +37,11 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    max-width: 100%;
+    min-width: 100%;
     max-height: 100%;
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #city-info-panel {
@@ -49,6 +56,7 @@ html {
     opacity: 0.8;
     background: white;
     margin: 20px;
+    margin-left:70px;
 }
 
 /* Style the tab */
@@ -71,10 +79,6 @@ html {
     transition: 0.3s;
 }
 
-h3 {
-    text-align: center;
-}
-
 /* Change background color of buttons */
 
 .tab button:hover {
@@ -87,11 +91,40 @@ h3 {
 
 /* Style the tab content */
 
+.tablinks{
+    font-family: 'Varela';
+    font-size:20px;
+    font-weight: bold;
+}
+
+a, href{
+    color: #014b52;
+    font-family: 'Varela';
+}
+
+h3,h2{
+    text-align:center;
+    font-family: 'Varela';
+}
+
+#stats{
+    font-family: 'Varela';
+}
+
 .tabcontent {
-    display: none;
-    padding: 6px 12px;
+    /* display: none; */
+    padding-left:50px;
+    padding-right:50px;
     border: 1px solid #ccc;
     border-top: none;
+    font-family: 'Varela';
+    font-size: 20px;
+    padding-bottom: 60px;
+}
+
+.tab-header{
+    font-family: 'Varela';
+    font-size:22px;
 }
 
 .footer {
@@ -107,7 +140,9 @@ h3 {
     /* font-size: 20px; */
 }
 
-.tab-header {}
+.tab-header {
+    font-family: 'Varela';
+}
 
 .navbar {
     color: white;
@@ -129,13 +164,10 @@ h3 {
     text-size: 20px;
 }
 
-td {
-    font-family: 'Varela', monospace;
-}
-
 #logo-btn {
     font-family: 'Roboto Mono';
     font-size: 18px;
+    margin-left:60px;
 }
 
 #logo-btn:visited {
@@ -143,9 +175,26 @@ td {
 }
 
 #logo-btn:hover {
-    color: #FCE181;
+    color: #FEF9C7;
 }
 
 #logo-btn:active {
-    color: #FEF9C7;
+    color: #FCE181;
+}
+
+.btn{
+    background-color: #026670;
+    color: #ffffff;
+    font-family: 'Varela';
+    font-size:20px;
+}
+
+.btn:hover{
+    background-color: #9FEDD7;
+    color: #ffffff;
+}
+
+.btn:active{
+    background-color: #01545c;
+    color: #ffffff;
 }

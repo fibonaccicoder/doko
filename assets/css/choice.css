@@ -15,6 +15,16 @@
     color: #ffffff;
 }
 
+.btn:hover{
+    background-color: #218084;
+    color: #ffffff;
+}
+
+.btn:active{
+    background-color: #01545c;
+    color: #ffffff;
+}
+
 p{
     font-family: 'Varela', sans-serif;
     font-size:18px;
@@ -24,7 +34,7 @@ p{
 
 .left {
     left: 0;
-    background: linear-gradient(to bottom right,  rgb(255, 219, 88), #FEF9C7, #ffffff);
+    background: linear-gradient(to bottom right,  #FCE181, #FEF9C7, #ffffff);
     color:  #026670;
 }
 

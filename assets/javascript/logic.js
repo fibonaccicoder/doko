@@ -17,12 +17,7 @@ $(document).ready(function () {
     console.log(params);
     location = urlVariables[1];
 
-    // alert(typeof location)
-
-    // var cityNameDisplay = locationDisplay.replace("%20", " ");
-    // $(".city-name").text(cityNameDisplay);
-    // console.log("city name = " + locationDisplay);
-
+    // displays the city name on city.html
     $(".city-name").text(decodeURI(location));
 
     // takes the inputs from choice.html and saves them as variables
@@ -55,6 +50,7 @@ $(document).ready(function () {
     // this takes the inputs and leads to city.html
     $("#explore").on("click", function () {
         getInputs("city.html");
+        inputValidator();
 
     })
     // this takes the inputs and leads to jobs.html
@@ -62,6 +58,32 @@ $(document).ready(function () {
         getInputs("jobs.html");
 
     })
+
+    function inputValidator(html) {
+        // location = $("#city-input").val().trim();
+        // console.log("user-input= " + userInput);
+        var validArr = /^[A-Za-z]+$/;
+
+        if (location.valueOf().match(validArr)) {
+
+            alert("success")
+        } else {
+
+            alert("fail")
+
+        }
+    }
+
+
+
+
+    // <div class = "modal-content">
+    //   <span class = "close">&times;</span>
+    //   <div class = "modal-body">
+    //     <p>WOT ARE THOOOSE</p>
+    //   </div>
+    // </div>
+
 
 
     // this stores the location and keyword to the the URL
@@ -105,6 +127,7 @@ $(document).ready(function () {
     $("#previous-button").on("click", function () {
         changePageNum(pageNum--);
     })
+
     // display the page number on the page
     $("#page-number").text("Page " + pageNum);
 
@@ -153,14 +176,14 @@ $(document).ready(function () {
                     var jobTitleTd = $("<td>");
                     jobTitleTd.append(jobLink);
 
-                    var jobCompanyTd = $("<td>").text(response.jobs[i].company);
+                    var jobCompanyTd = $("<td id='company-name'>").text(response.jobs[i].company);
 
                     tRow.append(jobTitleTd, jobCompanyTd);
                     cityJobs.append(tRow);
                 }
             });
     }
-    displayJobs();
+    // displayJobs();
 
     // future function that will sort the job listings by city and return the number of listings for each city
     function sortResults(response) {}
@@ -199,7 +222,7 @@ $(document).ready(function () {
                 eventTitleTd.append(eventLink);
 
 
-                var eventTimeTd = $("<td>");
+                var eventTimeTd = $("<td id= 'event-date'>");
                 var startTime = response.events.event[i].start_time;
                 eventTimeTd.text(moment(startTime).format('MMMM Do YYYY'));
                 tRow.append(eventTitleTd, eventTimeTd);
@@ -228,8 +251,8 @@ $(document).ready(function () {
             for (var i = 0; i < index.length; i++) {
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
-                var nameTD = $("<td>").text(response.prices[index[i]].item_name);
-                var priceTD = $("<td>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
+                var nameTD = $("<td id = 'item-name'>").text(response.prices[index[i]].item_name);
+                var priceTD = $("<td id = 'item-price'>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
                 console.log("index" + index);
                 tRow.append(nameTD, priceTD);
                 cityStats.append(tRow);
