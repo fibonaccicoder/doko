@@ -10,6 +10,7 @@ grey #EDEAE5 */
 
 body,
 html {
+    overflow-y: scroll;
     min-height: 100%;
     margin: 0;
     /* background-repeat: no-repeat; */
@@ -36,7 +37,7 @@ a{
     font-family: 'Varela';
 }
 
-.btn{
+.btn {
     color: #ffffff;
     background-color: #026670;
 }
@@ -52,9 +53,10 @@ a{
     background: white;
 }
 
-#doko{
+#doko {
     font-family: 'Berkshire Swash', monospace;
-    font-size:50px;
+    font-size: 40px;
+    font-size: 50px;
 }
 
 #job-search-title,
@@ -91,7 +93,8 @@ a{
     font-family: 'Roboto Mono', monospace;
     /* font-size: 20px; */
 }
- .navbar-brand {
+
+.navbar-brand {
     color: white;
     /* font-size: 20px; */
 }
@@ -100,13 +103,14 @@ td {
     font-family: 'Varela', monospace;
 }
 
-#logo-btn{
+#logo-btn {
     font-family: 'Roboto Mono', monospace;
-    font-size:18px;
+    font-size: 18px;
 }
 
 #logo-btn:visited {
-    color:#026670;
+    color: #ffffff;
+    color: #026670;
 }
 
 #logo-btn:hover {
@@ -116,15 +120,19 @@ td {
 #logo-btn:active {
     color: #026670;
 }
-#button-line{
-    display:inline-block;
+
+#button-line {
+    display: inline-block;
 }
-#button-line > #previous-button{
-    display:inline-block;
+
+#button-line>#previous-button {
+    display: inline-block;
 }
-#button-line > #page-number{
-    display:inline-block;
+
+#button-line>#page-number {
+    display: inline-block;
 }
-#button-line > #next-button{
-    display:inline-block;
+
+#button-line>#next-button {
+    display: inline-block;
 }

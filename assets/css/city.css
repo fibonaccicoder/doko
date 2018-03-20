@@ -1,5 +1,6 @@
 body,
 html {
+    overflow-y: scroll;
     min-height: 100%;
     margin: 0;
     /* background-repeat: no-repeat; */
@@ -15,12 +16,12 @@ h4{
 
 .btn{
     background-color: #026670;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-.input-group-btn{
+.input-group-btn {
     background-color: #026670;
-    color:#ffffff;
+    color: #ffffff;
 }
 
 #doko {
@@ -82,17 +83,9 @@ h4{
     background-color: rgb(235, 199, 133);
 }
 
-/* .tab button.active {
-    background-color: rgb(236, 165, 32);
-} */
-
-.tab button.selected {
-    background-color: rgb(230, 174, 72);
-}
-
-/* .tab button:focus {
+.tab button:focus {
     background-color: rgb(233, 177, 74);
-} */
+}
 
 /* Style the tab content */
 
@@ -173,7 +166,7 @@ td {
     font-family: 'Varela', monospace;
 }
 
-#logo-btn{
+#logo-btn {
     font-family: 'Roboto Mono';
     font-size: 18px;
 }

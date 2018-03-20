@@ -21,10 +21,6 @@ function cityInfo(event, tabName) {
 }
 
 //Default Open the "Home" tab on the city.html page
-// Get the element with id="defaultOpen" and click on it
+// Get the element with id="defaultOpen" and click on it and give it focus
 document.getElementById("defaultOpen").click();
-
-$('button').on('click', function () {
-    $('button').removeClass('selected');
-    $(this).addClass('selected');
-});
+document.getElementById("defaultOpen").focus();
