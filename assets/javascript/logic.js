@@ -149,7 +149,7 @@ $(document).ready(function () {
                     var jobTitleTd = $("<td>");
                     jobTitleTd.append(jobLink);
 
-                    var jobCompanyTd = $("<td>").text(response.jobs[i].company);
+                    var jobCompanyTd = $("<td id='company-name'>").text(response.jobs[i].company);
 
                     tRow.append(jobTitleTd, jobCompanyTd);
                     cityJobs.append(tRow);
@@ -195,7 +195,7 @@ $(document).ready(function () {
                 eventTitleTd.append(eventLink);
 
 
-                var eventTimeTd = $("<td>");
+                var eventTimeTd = $("<td id= 'event-date'>");
                 var startTime = response.events.event[i].start_time;
                 eventTimeTd.text(moment(startTime).format('MMMM Do YYYY'));
                 tRow.append(eventTitleTd, eventTimeTd);
@@ -224,8 +224,8 @@ $(document).ready(function () {
             for (var i = 0; i < index.length; i++) {
                 var cityStats = $("#city-stats");
                 var tRow = $("<tr>");
-                var nameTD = $("<td>").text(response.prices[index[i]].item_name);
-                var priceTD = $("<td>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
+                var nameTD = $("<td id = 'item-name'>").text(response.prices[index[i]].item_name);
+                var priceTD = $("<td id = 'item-price'>").text("$ " + response.prices[index[i]].average_price.toFixed(2));
                 console.log("index" + index);
                 tRow.append(nameTD, priceTD);
                 cityStats.append(tRow);

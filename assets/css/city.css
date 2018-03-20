@@ -3,11 +3,14 @@ html {
     overflow-y: scroll;
     min-height: 100%;
     margin: 0;
-    /* background-repeat: no-repeat; */
     background-attachment: fixed;
     background: linear-gradient(to bottom right, #026670, #9FEDD7, #ffffff);
     font-family: 'Varela', monospace;
     font-size: 18px;
+}
+
+#company-name, #event-date, #item-name, #item-price{
+    font-family: 'Varela';
 }
 
 h4{
@@ -41,6 +44,8 @@ h4{
     max-width: 100%;
     max-height: 100%;
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #city-info-panel {
@@ -55,6 +60,7 @@ h4{
     opacity: 0.8;
     background: white;
     margin: 20px;
+    margin-left:70px;
 }
 
 /* Style the tab */
@@ -96,7 +102,7 @@ h4{
 }
 
 a, href{
-    color: #01545c;
+    color: #014b52;
     font-family: 'Varela';
 }
 
@@ -169,6 +175,7 @@ td {
 #logo-btn {
     font-family: 'Roboto Mono';
     font-size: 18px;
+    margin-left:60px;
 }
 
 #logo-btn:visited {
@@ -176,9 +183,26 @@ td {
 }
 
 #logo-btn:hover {
-    color: #FCE181;
+    color: #FEF9C7;
 }
 
 #logo-btn:active {
-    color: #FEF9C7;
+    color: #FCE181;
+}
+
+.btn{
+    background-color: #026670;
+    color: #ffffff;
+    font-family: 'Varela';
+    font-size:20px;
+}
+
+.btn:hover{
+    background-color: #9FEDD7;
+    color: #ffffff;
+}
+
+.btn:active{
+    background-color: #01545c;
+    color: #ffffff;
 }
