@@ -112,7 +112,7 @@ h3,h2{
 }
 
 .tabcontent {
-    display: none;
+    /* display: none; */
     padding-left:50px;
     padding-right:50px;
     border: 1px solid #ccc;
