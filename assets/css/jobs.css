@@ -7,18 +7,28 @@ beige #FEF9C7
 orange #FCE181
 grey #EDEAE5 */
 
-
-
-body,html{
+body,
+html {
     min-height: 100%;
     margin: 0;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    background: linear-gradient(to bottom right, #FCE181,#FEF9C7, #ffffff);
+    font-size: 18px;
+}
+
+/* body, html{
+    min-height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background: linear-gradient(to bottom right, #FCE181,#FEF9C7, #ffffff);
-}
+    margin:0;
+    font-family: 'Varela';
+} */
 
 a{
     color: #026670;
+    font-family: 'Varela';
 }
 
 .btn{
@@ -34,7 +44,7 @@ a{
 
 #doko{
     font-family: 'Berkshire Swash', monospace;
-    font-size:40px;
+    font-size:50px;
 }
 
 #job-search-title,
@@ -80,16 +90,21 @@ td {
     font-family: 'Varela', monospace;
 }
 
+#logo-btn{
+    font-family: 'Roboto Mono', monospace;
+    font-size:18px;
+}
+
 #logo-btn:visited {
-    color:#ffffff;
+    color:#026670;
 }
 
 #logo-btn:hover {
-    color: #026670;
+    color: #9FEDD7;
 }
 
 #logo-btn:active {
-    color: #9FEDD7;
+    color: #026670;
 }
 #button-line{
     display:inline-block;
