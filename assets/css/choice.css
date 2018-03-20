@@ -15,6 +15,16 @@
     color: #ffffff;
 }
 
+.btn:hover{
+    background-color: #9FEDD7;
+    color: #ffffff;
+}
+
+.btn:active{
+    background-color: #01545c;
+    color: #ffffff;
+}
+
 p{
     font-family: 'Varela', sans-serif;
     font-size:18px;
