@@ -5,14 +5,13 @@ beige #FEF9C7
 orange #FCE181
 grey #EDEAE5 */
 
-
 /* #inspirational-quote {
 	margin-top: 80px;
 } */
 
 .jumbotron {
 	margin-top: 60px;
-	padding-bottom:10px;
+	padding-bottom: 10px;
 	height: 100%;
 	background: rgb(245, 240, 240);
 	opacity: 0.75;
@@ -26,36 +25,43 @@ grey #EDEAE5 */
 	padding-right:70px;
 }
 
-#enter-button{
+#enter-button {
 	background-color: #026670;
 	color: #ffffff;
 }
-.btn{
+
+.btn {
 	font-family: 'Roboto Mono';
-	margin-right:auto;
-	margin-left:auto;
-	align:center;
-	opacity:1.0;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	opacity: 1.0;
 }
 
-#doko{
-	font-family:'Berkshire Swash',monospace;
-	font-size:100px;
-	text-align:center;
+#doko {
+	font-family: 'Berkshire Swash', monospace;
+	font-size: 100px;
+	text-align: center;
 }
 
-#lead{
-	text-align:center;
+#lead {
+	text-align: center;
 	font-family: 'Roboto Mono';
-	font-size:22px;
-	color:#026670;
+	font-size: 22px;
+	color: #026670;
 }
 
 #author {
 	font-family: 'Tangerine', monospace;
+<<<<<<< HEAD
 	font-size: 36px;
 	text-align:right;
 	padding-right:200px;
+=======
+	font-size: 30px;
+	text-align: right;
+	padding-right: 200px;
+>>>>>>> 4247a6a6207e1a264dbda101de3172b3e17b7b14
 	clear: both;
 }
 

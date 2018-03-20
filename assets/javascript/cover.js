@@ -1,4 +1,3 @@
-
 //API for inspirational quotes of the day for people to follow their bliss
 var quotesQueryURL = "https://quotes.rest/qod.json";
 

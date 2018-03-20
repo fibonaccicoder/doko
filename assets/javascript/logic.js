@@ -181,7 +181,7 @@ $(document).ready(function () {
 
     // displays the events tab on city.html
     function searchEvents() {
-        var eventfulURL = "http://api.eventful.com/json/events/search?app_key=KdNhpLh2wR3FMTL6&location=" + location + "&date=Future&category=" + category;
+        var eventfulURL = "http://api.eventful.com/json/events/search?app_key=KdNhpLh2wR3FMTL6&location=" + location + "&date=Future&category=music" + category;
         $.ajax({
             url: 'https://corsbridge.herokuapp.com/' + encodeURIComponent(eventfulURL),
             method: "GET",
