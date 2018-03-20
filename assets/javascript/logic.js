@@ -50,6 +50,7 @@ $(document).ready(function () {
     // this takes the inputs and leads to city.html
     $("#explore").on("click", function () {
         getInputs("city.html");
+        inputValidator();
 
     })
     // this takes the inputs and leads to jobs.html
@@ -57,6 +58,32 @@ $(document).ready(function () {
         getInputs("jobs.html");
 
     })
+
+    function inputValidator(html) {
+        // location = $("#city-input").val().trim();
+        // console.log("user-input= " + userInput);
+        var validArr = /^[A-Za-z]+$/;
+
+        if (location.valueOf().match(validArr)) {
+
+            alert("success")
+        } else {
+
+            alert("fail")
+
+        }
+    }
+
+
+
+
+    // <div class = "modal-content">
+    //   <span class = "close">&times;</span>
+    //   <div class = "modal-body">
+    //     <p>WOT ARE THOOOSE</p>
+    //   </div>
+    // </div>
+
 
 
     // this stores the location and keyword to the the URL
@@ -156,7 +183,7 @@ $(document).ready(function () {
                 }
             });
     }
-    displayJobs();
+    // displayJobs();
 
     // future function that will sort the job listings by city and return the number of listings for each city
     function sortResults(response) {}
