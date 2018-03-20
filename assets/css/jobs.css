@@ -45,7 +45,7 @@ a{
 
 #doko {
     font-family: 'Berkshire Swash', monospace;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 #job-search-title,
@@ -86,10 +86,6 @@ a{
 .navbar-brand {
     color: white;
     /* font-size: 20px; */
-}
-
-td {
-    font-family: 'Varela', monospace;
 }
 
 #logo-btn {
@@ -134,7 +130,7 @@ h4{
 .btn{
     background-color: #026670;
     color: #ffffff;
-    font-size:18px;
+    font-size:20px;
 }
 
 .btn:hover{

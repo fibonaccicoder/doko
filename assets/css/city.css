@@ -29,11 +29,7 @@ h4{
 
 #doko {
     font-family: 'Berkshire Swash', monospace;
-    font-size: 50px;
-}
-
-#cityImage {
-    align-content: center;
+    font-size: 60px;
 }
 
 .city-image {
@@ -41,7 +37,7 @@ h4{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    max-width: 100%;
+    min-width: 100%;
     max-height: 100%;
     padding: 10px;
     margin-left: auto;
@@ -166,10 +162,6 @@ h3,h2{
 .city-name {
     text-transform: capitalize;
     text-size: 20px;
-}
-
-td {
-    font-family: 'Varela', monospace;
 }
 
 #logo-btn {
