@@ -1,12 +1,11 @@
-
 //API for inspirational quotes of the day for people to follow their bliss
 var quotesQueryURL = "https://quotes.rest/qod.json";
 
 
 //display random images of cities and places in US on homepage--one image per load
 function changeRandomImage() {
-    var imageArray = ["assets/images/sanfran.jpg", "assets/images/maui.jpg", "assets/images/detroit.jpg", "assets/images/losangeles.jpg", "assets/images/sanfranstreet.jpg","assets/images/neworleans.jpg"] 
-    // ["assets/images/albuquerque.jpg", "assets/images/anchorage.jpg", "assets/images/baltimore.jpg", "assets/images/boston.jpg", "assets/images/boulder.jpg", "assets/images/cadillacranch.jpg", "assets/images/cheyenne.jpg", "assets/images/chicago.jpg", "assets/images/crestedbutte.jpg", "assets/images/detroit.jpg", "assets/images/detroit2.jpg", "assets/images/horseshoebend.jpeg", "assets/images/losangeles.jpg", "assets/images/maui.jpg", "assets/images/memphis.jpg", "assets/images/memphis2.jpg", "assets/images/miami.jpg", "assets/images/minneapolis.jpg", "assets/images/missoula.jpg", "assets/images/newhampshire.jpg", "assets/images/neworleans.jpg", "assets/images/puertorico.jpg", "assets/images/sandiego.jpg", "assets/images/sanfran.jpg", "assets/images/sanfranfog.jpg", "assets/images/sanfranstreet.jpg", "assets/images/savannah.jpg", "assets/images/seattle.jpg", "assets/images/sedona.jpg", "assets/images/taos.jpg", "assets/images/washingtondc.jpg", "assets/images/sanfransun.jpg"]
+    var imageArray = ["assets/images/sanfran.jpg", "assets/images/maui.jpg", "assets/images/detroit.jpg", "assets/images/losangeles.jpg", "assets/images/sanfranstreet.jpg", "assets/images/neworleans.jpg"]
+    // ["assets/images/albuquerque.jpg", "assets/images/anchorage.jpg", "assets/images/baltimore.jpg", "assets/images/boston.jpg", "assets/images/boulder.jpg", "assets/images/cadillacranch.jpg", "assets/images/cheyenne.jpg", "assets/images/chicago.jpg", "assets/images/crestedbutte.jpg", "assets/images/detroit.jpg", "assets/images/detroit2.jpg", "assets/images/horseshoebend.jpeg", "assets/images/losangeles.jpg", "assets/images/maui.jpg", "assets/images/memphis.jpg", "assets/images/memphis2.jpg", "assets/images/miami.jpg", "assets/images/minneapolis.jpg", "assets/images/missoula.jpg", "assets/images/newhampshire.jpg", "assets/images/neworleans.jpg", "assets/images/puertorico.jpg", "assets/images/sandiego.jpg", "assets/images/sanfran.jpg", "assets/images/sanfranfog.jpg", "assets/images/sanfranstreet.jpg", "assets/images/savannah.jpg", "assets/images/seattle.jpg", "assets/images/sedona.jpg", "assets/images/taos.jpg", "assets/images/washingtondc.jpg"]
     var randomImage = Math.floor(Math.random() * imageArray.length);
     document.body.background = imageArray[randomImage];
 }
