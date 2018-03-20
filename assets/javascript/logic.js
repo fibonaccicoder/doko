@@ -23,7 +23,7 @@ $(document).ready(function () {
     // $(".city-name").text(cityNameDisplay);
     // console.log("city name = " + locationDisplay);
 
-    $(".city-name").text(location);
+    $(".city-name").text(decodeURI(location));
 
     // takes the inputs from choice.html and saves them as variables
     function getInputs(html) {

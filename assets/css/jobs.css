@@ -7,21 +7,21 @@ beige #FEF9C7
 orange #FCE181
 grey #EDEAE5 */
 
-
-
-body,html{
+body,
+html {
+    overflow-y: scroll;
     min-height: 100%;
     margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background: linear-gradient(to bottom right, #FCE181,#FEF9C7, #ffffff);
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    background: linear-gradient(to bottom right, #FCE181, #FEF9C7, #ffffff);
 }
 
-a{
+a {
     color: #026670;
 }
 
-.btn{
+.btn {
     color: #ffffff;
     background-color: #026670;
 }
@@ -32,9 +32,9 @@ a{
     background: white;
 }
 
-#doko{
+#doko {
     font-family: 'Berkshire Swash', monospace;
-    font-size:40px;
+    font-size: 40px;
 }
 
 #job-search-title,
@@ -71,7 +71,8 @@ a{
     font-family: 'Roboto Mono', monospace;
     /* font-size: 20px; */
 }
- .navbar-brand {
+
+.navbar-brand {
     color: white;
     /* font-size: 20px; */
 }
@@ -81,7 +82,7 @@ td {
 }
 
 #logo-btn:visited {
-    color:#ffffff;
+    color: #ffffff;
 }
 
 #logo-btn:hover {
@@ -91,15 +92,19 @@ td {
 #logo-btn:active {
     color: #9FEDD7;
 }
-#button-line{
-    display:inline-block;
+
+#button-line {
+    display: inline-block;
 }
-#button-line > #previous-button{
-    display:inline-block;
+
+#button-line>#previous-button {
+    display: inline-block;
 }
-#button-line > #page-number{
-    display:inline-block;
+
+#button-line>#page-number {
+    display: inline-block;
 }
-#button-line > #next-button{
-    display:inline-block;
+
+#button-line>#next-button {
+    display: inline-block;
 }
