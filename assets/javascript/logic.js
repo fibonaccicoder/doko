@@ -19,11 +19,13 @@ $(document).ready(function () {
 
     // alert(typeof location)
 
-    // var cityNameDisplay = locationDisplay.replace("%20", " ");
-    // $(".city-name").text(cityNameDisplay);
-    // console.log("city name = " + locationDisplay);
-
-    $(".city-name").text(location);
+    var cityNameDisplay = location.replace("%20", " ");
+    $(".city-name").text(cityNameDisplay);
+    console.log("city name = " + location);
+    //var cityNameDisplay = location.split("%");
+    //console.log(location);
+    //console.log(cityNameDisplay);
+    //$(".city-name").text(location);
 
     // takes the inputs from choice.html and saves them as variables
     function getInputs(html) {
@@ -163,7 +165,7 @@ $(document).ready(function () {
     displayJobs();
 
     // future function that will sort the job listings by city and return the number of listings for each city
-    function sortResults(response) {}
+    function sortResults(response) { }
 
 
     // This makes runNumbeo and searchEvents work
