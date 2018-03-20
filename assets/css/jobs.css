@@ -1,12 +1,29 @@
 /* Jooble API only to be used on presentation day 7394bf1d-6c72-487d-9766-8c32c01ac3b2 */
 
+/* 
+dark teal #026670
+lighter teal #9FEDD7
+beige #FEF9C7
+orange #FCE181
+grey #EDEAE5 */
+
+
 
 body,html{
     min-height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: linear-gradient(to bottom right, #9FEDD7, #026670, #FEF9C7 );
+    background: linear-gradient(to bottom right, #FCE181,#FEF9C7, #ffffff);
+}
+
+a{
+    color: #026670;
+}
+
+.btn{
+    color: #ffffff;
+    background-color: #026670;
 }
 
 #job-panel {
