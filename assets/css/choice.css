@@ -10,32 +10,32 @@
     padding-top: 20px;
 }
 
-.btn{
+.btn {
     background-color: #026670;
     color: #ffffff;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #218084;
     color: #ffffff;
 }
 
-.btn:active{
+.btn:active {
     background-color: #01545c;
     color: #ffffff;
 }
 
-p{
+p {
     font-family: 'Varela', sans-serif;
-    font-size:18px;
+    font-size: 18px;
 }
 
 /* Control the left side */
 
 .left {
     left: 0;
-    background: linear-gradient(to bottom right,  #FCE181, #FEF9C7, #ffffff);
-    color:  #026670;
+    background: linear-gradient(to bottom right, #FCE181, #FEF9C7, #ffffff);
+    color: #026670;
 }
 
 /* Control the right side */
@@ -94,4 +94,11 @@ p{
     color: white;
     font-family: 'Berkshire Swash', monospace;
     /* font-size: 20px; */
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: button-bevel;
 }
