@@ -193,7 +193,7 @@ $(document).ready(function () {
                 }
             });
     }
-    // displayJobs();
+    displayJobs();
 
     // future function that will sort the job listings by city and return the number of listings for each city
     function sortResults(response) {}
